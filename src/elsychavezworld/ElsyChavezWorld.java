@@ -16,7 +16,9 @@ public class ElsyChavezWorld {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Parcial 2 de POO, proximamente");
+        Menu menu = Menu.getInstance();
+        
+        menu.menu();
     }
     
 }

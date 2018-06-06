@@ -11,6 +11,11 @@ package milicia;
  */
 public class EscuadronesMagos implements Milicia{
     @Override
+    public void entrenar(){
+        System.out.println("Entrenando escuadron");
+    }
+    
+    @Override
     public void atacar(){
         System.out.println("Atacando al enemigo...");
     }

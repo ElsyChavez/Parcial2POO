@@ -39,9 +39,9 @@ public class FactoryVehiculos implements AbstractFactory{
     @Override 
     public Vehiculos getVehiculo(String type){
         switch (type){
-            case "autovolador":
-                return new Escoba();
             case "escoba":
+                return new Escoba();
+            case "autovolador":
                 return new AutoVolador();
         }
         return null;

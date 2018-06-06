@@ -10,6 +10,7 @@ package milicia;
  * @author elsyc
  */
 public interface Milicia {
+    public void entrenar();
     public void atacar();
     public void defender();
 }
