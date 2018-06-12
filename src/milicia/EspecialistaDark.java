@@ -7,21 +7,22 @@ package milicia;
 
 /**
  *
- * @author elsyc
+ * @author Ivis Chavez
  */
-public class EscuadronesMagos implements Milicia{
+public class EspecialistaDark implements Milicia{
     @Override
     public void entrenar(){
-        System.out.println("Entrenando escuadron de magos");
+        System.out.println("Entrenando especialista DarkSider");
     }
     
     @Override
     public void atacar(){
-        System.out.println("Escuadron de magos atacando al enemigo");
+        System.out.println("Especialista Dark atacando al enemigo");
     }
     
     @Override
     public void defender(){
-        System.out.println("Escuadron de magos defendiendo territorio");
+        System.out.println("Especialista Dark defendiendo territorio");
     }
+    
 }

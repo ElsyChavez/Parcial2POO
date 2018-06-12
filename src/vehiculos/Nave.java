@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edificaciones;
+package vehiculos;
 
 /**
  *
- * @author elsyc
+ * @author Ivis Chavez
  */
-public class CentroMandoMagos implements Edificaciones{
+public class Nave implements Vehiculos{
     @Override
-    public void construir(){
-        System.out.println("Construyendo Edificio mas importante de la raza magos");
+    public void armar(){
+        System.out.println("Haciendo nave");
     }
     
 }

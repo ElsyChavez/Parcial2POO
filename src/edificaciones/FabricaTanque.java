@@ -7,12 +7,13 @@ package edificaciones;
 
 /**
  *
- * @author elsyc
+ * @author Ivis Chavez
  */
-public class CentroMandoMagos implements Edificaciones{
+public class FabricaTanque implements Edificaciones{
     @Override
     public void construir(){
-        System.out.println("Construyendo Edificio mas importante de la raza magos");
+        System.out.println("Construyendo fabrica de vehiculo 2 de la raza DarkSider");
     }
+    
     
 }

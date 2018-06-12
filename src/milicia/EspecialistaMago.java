@@ -12,16 +12,16 @@ package milicia;
 public class EspecialistaMago implements Milicia {
     @Override
     public void entrenar(){
-        System.out.println("Entrenando especialista");
+        System.out.println("Entrenando especialista mago");
     }
     
     @Override
     public void atacar(){
-        System.out.println("Atacando al enemigo");
+        System.out.println("Especialista mago atacando al enemigo");
     }
     
     @Override
     public void defender(){
-        System.out.println("Defendiendo territorio propio");
+        System.out.println("Especialista mago defendiendo territorio");
     }
 }

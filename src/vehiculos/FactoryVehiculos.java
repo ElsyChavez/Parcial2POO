@@ -43,6 +43,15 @@ public class FactoryVehiculos implements AbstractFactory{
                 return new Escoba();
             case "autovolador":
                 return new AutoVolador();
+            case "nave":
+                return new Nave();
+            case "juggernaut":
+                return new Juggernaut();
+            case "avioneta":
+                return new Avioneta();
+            case "tanque":
+                return new Tanque();
+            
         }
         return null;
     }

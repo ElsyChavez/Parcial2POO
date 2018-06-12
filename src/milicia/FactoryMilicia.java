@@ -5,14 +5,7 @@
  */
 package milicia;
 
-import edificaciones.CentroMandoMagos;
-import edificaciones.CuartelMagos;
 import edificaciones.Edificaciones;
-import edificaciones.FabricaAutoVolador;
-import edificaciones.FabricaEscoba;
-import edificaciones.RecolectorGaleon;
-import edificaciones.RecolectorKnut;
-import edificaciones.RecolectorSickle;
 import factory.AbstractFactory;
 import razas.Razas;
 import recursos.Recursos;
@@ -31,10 +24,18 @@ public class FactoryMilicia implements AbstractFactory{
     @Override 
     public Milicia getMilicia(String type){
         switch (type){
-            case "escuadron":
+            case "escuadronmagos":
                 return new EscuadronesMagos();
-            case "especialista":
+            case "especialistamago":
                 return new EspecialistaMago();
+            case "escuadrondark":
+                return new EscuadronDark();
+            case "especialistadark":
+                return new EspecialistaDark();
+            case "escuadronmuggle":
+                return new EscuadronMuggle();
+            case "especialistamuggle":
+                return new EspecialistaMuggle();
         }
         return null;
     }

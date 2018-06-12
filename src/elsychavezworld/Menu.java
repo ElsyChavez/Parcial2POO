@@ -32,15 +32,15 @@ public class Menu {
     }
 
     public void escoger() {
-        System.out.println("***Menu jugador***");
+        System.out.println("***Menu jugador mago***");
         System.out.println("1. Construir cuartel");
-        System.out.println("2. Construir recolector principal");
-        System.out.println("3. Construir recolector secundario");
-        System.out.println("4. Construir recolector comun");
-        System.out.println("5. Construir fabrica de vehiculo 1");
-        System.out.println("6. Construir fabrica de vehiculo 2");
-        System.out.println("7. Armar tipo de vehiculo 1");
-        System.out.println("8. Armar tipo de vehiculo 2");
+        System.out.println("2. Construir recolector de galeones");
+        System.out.println("3. Construir recolector de sickles");
+        System.out.println("4. Construir recolector de knuts");
+        System.out.println("5. Construir fabrica de escobas");
+        System.out.println("6. Construir fabrica de auto volador");
+        System.out.println("7. Armar escoba");
+        System.out.println("8. Armar autovolador");
         System.out.println("9. Entrenar escuadrones");
         System.out.println("10. Entrenar especialista");
         System.out.println("11. Atacar enemigo");
@@ -114,9 +114,9 @@ public class Menu {
                         break;
                     case 12:
                         Milicia defensor1 = factory2.getMilicia("escuadron");
-                        defensor1.atacar();
+                        defensor1.defender();
                         Milicia defensor2 = factory2.getMilicia("especialista");
-                        defensor2.atacar();
+                        defensor2.defender();
                         break;
                     case 13:
                         System.out.println("***Fin programa***");
