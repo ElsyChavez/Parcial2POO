@@ -23,71 +23,71 @@ public ArrayList<Edificaciones> edificio;
     public void agregarCentroMandoMago() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones cm = factoryE.getEdificacion("centroM");
-        edificio.add(cm);
+        Edificaciones centromandomago = factoryE.getEdificacion("centroM");
+        edificio.add(centromandomago);
     }
     
     public void agregarCentroMandoDark() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones cd = factoryE.getEdificacion("centroD");
-        edificio.add(cd);
+        Edificaciones centromandodark = factoryE.getEdificacion("centroD");
+        edificio.add(centromandodark);
     }
     
     public void agregarCentroMandoMuggle() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones cmu = factoryE.getEdificacion("centroMU");
-        edificio.add(cmu);
+        Edificaciones centromandomuggle = factoryE.getEdificacion("centroMU");
+        edificio.add(centromandomuggle);
     }
     
     public void agregarRecolectorGaleon() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones reg = factoryE.getEdificacion("recolector1M");
-        edificio.add(reg);
+        Edificaciones recolectorgaleon = factoryE.getEdificacion("recolector1M");
+        edificio.add(recolectorgaleon);
     }
     
     public void agregarRecolectorSickle() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones res = factoryE.getEdificacion("recolector2M");
-        edificio.add(res);
+        Edificaciones recolectorsickle = factoryE.getEdificacion("recolector2M");
+        edificio.add(recolectorsickle);
     }
     
     public void agregarRecolectorKnuts() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones rek = factoryE.getEdificacion("recolector3M");
-        edificio.add(rek);
+        Edificaciones recolectorknut = factoryE.getEdificacion("recolector3M");
+        edificio.add(recolectorknut);
     }
     
     public void agregarCuartelMagos() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones cum = factoryE.getEdificacion("cuartelM");
-        edificio.add(cum);
+        Edificaciones cuartelmago = factoryE.getEdificacion("cuartelM");
+        edificio.add(cuartelmago);
     }
     
     public void agregarFabricaEscoba() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones fae = factoryE.getEdificacion("fabrica1M");
-        edificio.add(fae);
+        Edificaciones fabricaescoba = factoryE.getEdificacion("fabrica1M");
+        edificio.add(fabricaescoba);
     }
     
     public void agregarFabricaAutoVolador() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones fav = factoryE.getEdificacion("fabrica2M");
-        edificio.add(fav);
+        Edificaciones fabricaauto = factoryE.getEdificacion("fabrica2M");
+        edificio.add(fabricaauto);
     }
     
     public void agregarRecolectorSangre() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones resa = factoryE.getEdificacion("recolector1D");
-        edificio.add(resa);
+        Edificaciones recolectorsangre = factoryE.getEdificacion("recolector1D");
+        edificio.add(recolectorsangre);
     }
     
     public void agregarRecolectorDienteDragon() {
@@ -100,71 +100,71 @@ public ArrayList<Edificaciones> edificio;
     public void agregarRecolectorVeneno() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones rev = factoryE.getEdificacion("recolector3D");
-        edificio.add(rev);
+        Edificaciones recolectorveneno = factoryE.getEdificacion("recolector3D");
+        edificio.add(recolectorveneno);
     }
     
     public void agregarCuartelDark() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones cud = factoryE.getEdificacion("cuartelD");
-        edificio.add(cud);
+        Edificaciones cuarteldark = factoryE.getEdificacion("cuartelD");
+        edificio.add(cuarteldark);
     }
     
     public void agregarFabricaNave() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones fan = factoryE.getEdificacion("fabrica1D");
-        edificio.add(fan);
+        Edificaciones fabricanave = factoryE.getEdificacion("fabrica1D");
+        edificio.add(fabricanave);
     }
     
     public void agregarFabricaJuggernaut() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones faj = factoryE.getEdificacion("fabrica2D");
-        edificio.add(faj);
+        Edificaciones fabricajuggernaut = factoryE.getEdificacion("fabrica2D");
+        edificio.add(fabricajuggernaut);
     }
     
     public void agregarRecolectorDinero() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones redi = factoryE.getEdificacion("recolector1MU");
-        edificio.add(redi);
+        Edificaciones recolectordinero = factoryE.getEdificacion("recolector1MU");
+        edificio.add(recolectordinero);
     }
     
     public void agregarRecolectorCredito() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones rec = factoryE.getEdificacion("recolector2MU");
-        edificio.add(rec);
+        Edificaciones recolectorcredito = factoryE.getEdificacion("recolector2MU");
+        edificio.add(recolectorcredito);
     }
     
     public void agregarRecolectorCupon() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones recu = factoryE.getEdificacion("recolector3MU");
-        edificio.add(recu);
+        Edificaciones recolectorcupon = factoryE.getEdificacion("recolector3MU");
+        edificio.add(recolectorcupon);
     }
     
     public void agregarCuartelMuggle() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones cumu = factoryE.getEdificacion("cuartelMU");
-        edificio.add(cumu);
+        Edificaciones cuartelmuggle = factoryE.getEdificacion("cuartelMU");
+        edificio.add(cuartelmuggle);
     }
     
     public void agregarFabricaAvioneta() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones favi = factoryE.getEdificacion("fabrica1MU");
-        edificio.add(favi);
+        Edificaciones fabricaavioneta = factoryE.getEdificacion("fabrica1MU");
+        edificio.add(fabricaavioneta);
     }
     
     public void agregarFabricaTanque() {
         AbstractFactory factoryE;
         factoryE =  FactoryProducer.getFactory("edificacion");
-        Edificaciones fat = factoryE.getEdificacion("fabrica2MU");
-        edificio.add(fat);
+        Edificaciones fabricatanque = factoryE.getEdificacion("fabrica2MU");
+        edificio.add(fabricatanque);
     }
     
     public void mostrarListaEdificaciones(){
