@@ -23,43 +23,43 @@ public class ListaMilicia {
     public void agregarEscuadronMagos() {
         AbstractFactory factoryM;
         factoryM =  FactoryProducer.getFactory("milicia");
-        Milicia escm = factoryM.getMilicia("escuadronmagos");
-        milicia.add(escm);
+        Milicia escuadronmago = factoryM.getMilicia("escuadronmagos");
+        milicia.add(escuadronmago);
     }
     
     public void agregarEspecialistaMago() {
         AbstractFactory factoryM;
         factoryM =  FactoryProducer.getFactory("milicia");
-        Milicia ema = factoryM.getMilicia("especialistamago");
-        milicia.add(ema);
+        Milicia especialistamago = factoryM.getMilicia("especialistamago");
+        milicia.add(especialistamago);
     }
    
     public void agregarEscuadronDark() {
         AbstractFactory factoryM;
         factoryM =  FactoryProducer.getFactory("milicia");
-        Milicia esda = factoryM.getMilicia("escuadrondark");
-        milicia.add(esda);
+        Milicia escuadrondark = factoryM.getMilicia("escuadrondark");
+        milicia.add(escuadrondark);
     }
     
     public void agregarEspecialistaDark() {
         AbstractFactory factoryM;
         factoryM =  FactoryProducer.getFactory("milicia");
-        Milicia eda = factoryM.getMilicia("especialistadark");
-        milicia.add(eda);
+        Milicia especialistadark = factoryM.getMilicia("especialistadark");
+        milicia.add(especialistadark);
     }
     
     public void agregarEscuadronMuggle() {
         AbstractFactory factoryM;
         factoryM =  FactoryProducer.getFactory("milicia");
-        Milicia esmu = factoryM.getMilicia("escuadronmuggle");
-        milicia.add(esmu);
+        Milicia escuadronmuggle = factoryM.getMilicia("escuadronmuggle");
+        milicia.add(escuadronmuggle);
     }
     
     public void agregarEspecialistaMuggle() {
         AbstractFactory factoryM;
         factoryM =  FactoryProducer.getFactory("milicia");
-        Milicia emu = factoryM.getMilicia("especialistamuggle");
-        milicia.add(emu);
+        Milicia especialistamuggle = factoryM.getMilicia("especialistamuggle");
+        milicia.add(especialistamuggle);
     }
     
     public void mostrarListaMilicia(){
