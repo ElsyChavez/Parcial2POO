@@ -10,6 +10,7 @@ package edificaciones;
  * @author Ivis Chavez
  */
 public class RecolectorCupon implements Edificaciones{
+    int vida = 1000;
     @Override
     public void construir(){
         System.out.println("Construyendo recolector de recurso 3 de la raza Muggle");

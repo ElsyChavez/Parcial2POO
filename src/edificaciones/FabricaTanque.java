@@ -10,6 +10,7 @@ package edificaciones;
  * @author Ivis Chavez
  */
 public class FabricaTanque implements Edificaciones{
+    int vida = 1000;
     @Override
     public void construir(){
         System.out.println("Construyendo fabrica de vehiculo 2 de la raza DarkSider");

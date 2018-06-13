@@ -10,6 +10,7 @@ package edificaciones;
  * @author Ivis Chavez
  */
 public class CentroMandoDark implements Edificaciones{
+    int vida = 10000;
     @Override
     public void construir(){
         System.out.println("Construyendo Edificio mas importante de la raza DarkSider");

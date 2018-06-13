@@ -12,6 +12,7 @@ import factory.AbstractFactory;
  * @author elsyc
  */
 public class RecolectorGaleon implements Edificaciones{
+    int vida = 1000;
     @Override
     public void construir(){
         System.out.println("Construyendo recolector 1, principal");

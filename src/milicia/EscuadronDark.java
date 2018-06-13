@@ -10,6 +10,7 @@ package milicia;
  * @author Ivis Chavez
  */
 public class EscuadronDark implements Milicia{
+    int vida = 1000, danio = 500;
     @Override
     public void entrenar(){
         System.out.println("Entrenando escuadron de DarkSiders");

@@ -10,6 +10,7 @@ package edificaciones;
  * @author elsyc
  */
 public class FabricaAutoVolador implements Edificaciones{
+    int vida = 1000;
     @Override
     public void construir(){
         System.out.println("Construyendo fabrica de vehiculos 2, secundario");

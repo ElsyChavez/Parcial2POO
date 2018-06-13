@@ -20,47 +20,47 @@ public class FactoryEdificacion implements AbstractFactory{
     public Edificaciones getEdificacion(String type){
         switch (type){
             case "recolector1M":
-                return new RecolectorGaleon();
+                return new Recolector1();
             case "recolector2M":
-                return new RecolectorSickle();
+                return new Recolector2();
             case "recolector3M":
-                return new RecolectorKnut();
+                return new Recolector3();
             case "fabrica1M":
-                return new FabricaEscoba();
+                return new FabricaVehiculo1();
             case "fabrica2M":
-                return new FabricaAutoVolador();
+                return new FabricaVehiculo2();
             case "cuartelM":
-                return new CuartelMagos();
+                return new Cuartel();
             case "centroM":
-                return new CentroMandoMagos();
+                return new CentroMando();
             case "recolector1D":
-                return new RecolectorSangre();
+                return new Recolector1();
             case "recolector2D":
-                return new RecolectorDienteDragon();
+                return new Recolector2();
             case "recolector3D":
-                return new RecolectorVeneno();
+                return new Recolector3();
             case "fabrica1D":
-                return new FabricaNave();
+                return new FabricaVehiculo1();
             case "fabrica2D":
-                return new FabricaJuggernaut();
+                return new FabricaVehiculo2();
             case "cuartelD":
-                return new CuartelDark();
+                return new Cuartel();
             case "centroD":
-                return new CentroMandoDark();
+                return new CentroMando();
             case "recolector1MU":
-                return new RecolectorDinero();
+                return new Recolector1();
             case "recolector2MU":
-                return new RecolectorCredito();
+                return new Recolector2();
             case "recolector3MU":
-                return new RecolectorCupon();
+                return new Recolector3();
             case "fabrica1MU":
-                return new FabricaAvioneta();
+                return new FabricaVehiculo1();
             case "fabrica2MU":
-                return new FabricaTanque();
+                return new FabricaVehiculo2();
             case "cuartelMU":
-                return new CuartelMuggle();
+                return new Cuartel();
             case "centroMU":
-                return new CentroMandoMuggle();
+                return new CentroMando();
         }
         return null;
     }

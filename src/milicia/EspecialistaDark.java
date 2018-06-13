@@ -10,6 +10,7 @@ package milicia;
  * @author Ivis Chavez
  */
 public class EspecialistaDark implements Milicia{
+    int vida = 1500, danio = 700;
     @Override
     public void entrenar(){
         System.out.println("Entrenando especialista DarkSider");

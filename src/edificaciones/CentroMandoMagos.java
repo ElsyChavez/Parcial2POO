@@ -10,6 +10,7 @@ package edificaciones;
  * @author elsyc
  */
 public class CentroMandoMagos implements Edificaciones{
+    int vida = 10000;
     @Override
     public void construir(){
         System.out.println("Construyendo Edificio mas importante de la raza magos");

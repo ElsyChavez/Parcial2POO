@@ -10,6 +10,7 @@ package milicia;
  * @author elsyc
  */
 public class EscuadronesMagos implements Milicia{
+    int vida = 1000, danio = 200;
     @Override
     public void entrenar(){
         System.out.println("Entrenando escuadron de magos");

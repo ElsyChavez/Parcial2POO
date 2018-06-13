@@ -23,43 +23,43 @@ public class ListaMilicia {
     public void agregarEscuadronMagos() {
         AbstractFactory factoryM;
         factoryM =  FactoryProducer.getFactory("milicia");
-        Milicia milic = factoryM.getMilicia("escuadronmagos");
-        milicia.add(milic);
+        Milicia escm = factoryM.getMilicia("escuadronmagos");
+        milicia.add(escm);
     }
     
     public void agregarEspecialistaMago() {
         AbstractFactory factoryM;
         factoryM =  FactoryProducer.getFactory("milicia");
-        Milicia milic = factoryM.getMilicia("especialistamago");
-        milicia.add(milic);
+        Milicia ema = factoryM.getMilicia("especialistamago");
+        milicia.add(ema);
     }
    
     public void agregarEscuadronDark() {
         AbstractFactory factoryM;
         factoryM =  FactoryProducer.getFactory("milicia");
-        Milicia milic = factoryM.getMilicia("escuadrondark");
-        milicia.add(milic);
+        Milicia esda = factoryM.getMilicia("escuadrondark");
+        milicia.add(esda);
     }
     
     public void agregarEspecialistaDark() {
         AbstractFactory factoryM;
         factoryM =  FactoryProducer.getFactory("milicia");
-        Milicia milic = factoryM.getMilicia("especialistadark");
-        milicia.add(milic);
+        Milicia eda = factoryM.getMilicia("especialistadark");
+        milicia.add(eda);
     }
     
     public void agregarEscuadronMuggle() {
         AbstractFactory factoryM;
         factoryM =  FactoryProducer.getFactory("milicia");
-        Milicia milic = factoryM.getMilicia("escuadronmuggle");
-        milicia.add(milic);
+        Milicia esmu = factoryM.getMilicia("escuadronmuggle");
+        milicia.add(esmu);
     }
     
     public void agregarEspecialistaMuggle() {
         AbstractFactory factoryM;
         factoryM =  FactoryProducer.getFactory("milicia");
-        Milicia milic = factoryM.getMilicia("especialistamuggle");
-        milicia.add(milic);
+        Milicia emu = factoryM.getMilicia("especialistamuggle");
+        milicia.add(emu);
     }
     
     public void mostrarListaMilicia(){

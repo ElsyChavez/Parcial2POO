@@ -23,43 +23,43 @@ public class ListaVehiculos {
     public void agregarEscoba() {
         AbstractFactory factoryV;
         factoryV =  FactoryProducer.getFactory("vehiculo");
-        Vehiculos vehi = factoryV.getVehiculo("escoba");
-        vehiculo.add(vehi);
+        Vehiculos escoba = factoryV.getVehiculo("escoba");
+        vehiculo.add(escoba);
     }
     
     public void agregarAutoVolador() {
         AbstractFactory factoryV;
         factoryV =  FactoryProducer.getFactory("vehiculo");
-        Vehiculos vehi = factoryV.getVehiculo("autovolador");
-        vehiculo.add(vehi);
+        Vehiculos auto = factoryV.getVehiculo("autovolador");
+        vehiculo.add(auto);
     }
     
     public void agregarNave() {
         AbstractFactory factoryV;
         factoryV =  FactoryProducer.getFactory("vehiculo");
-        Vehiculos vehi = factoryV.getVehiculo("nave");
-        vehiculo.add(vehi);
+        Vehiculos nave = factoryV.getVehiculo("nave");
+        vehiculo.add(nave);
     }
     
     public void agregarJuggernaut() {
         AbstractFactory factoryV;
         factoryV =  FactoryProducer.getFactory("vehiculo");
-        Vehiculos vehi = factoryV.getVehiculo("juggernaut");
-        vehiculo.add(vehi);
+        Vehiculos jugger = factoryV.getVehiculo("juggernaut");
+        vehiculo.add(jugger);
     }
     
     public void agregarAvioneta() {
         AbstractFactory factoryV;
         factoryV =  FactoryProducer.getFactory("vehiculo");
-        Vehiculos vehi = factoryV.getVehiculo("avioneta");
-        vehiculo.add(vehi);
+        Vehiculos avioneta = factoryV.getVehiculo("avioneta");
+        vehiculo.add(avioneta);
     }
     
     public void agregarTanque() {
         AbstractFactory factoryV;
         factoryV =  FactoryProducer.getFactory("vehiculo");
-        Vehiculos vehi = factoryV.getVehiculo("tanque");
-        vehiculo.add(vehi);
+        Vehiculos tanque = factoryV.getVehiculo("tanque");
+        vehiculo.add(tanque);
     }
     
     public void mostrarListaEdificaciones(){

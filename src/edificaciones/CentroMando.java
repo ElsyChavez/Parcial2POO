@@ -7,13 +7,13 @@ package edificaciones;
 
 /**
  *
- * @author elsyc
+ * @author Ivis Chavez
  */
-public class FabricaEscoba implements Edificaciones{
-    int vida = 1000;
+public class CentroMando implements Edificaciones {
+    int vida = 10000;
     @Override
     public void construir(){
-        System.out.println("Construyendo fabrica de vehiculos 1, principal");
+        System.out.println("Construyendo edificio");
     }
     
 }

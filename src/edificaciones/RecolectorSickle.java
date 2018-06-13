@@ -10,6 +10,7 @@ package edificaciones;
  * @author elsyc
  */
 public class RecolectorSickle implements Edificaciones{
+    int vida = 1000;
     @Override
     public void construir(){
         System.out.println("Construyendo recolector 3,comun");
