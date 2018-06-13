@@ -25,10 +25,15 @@ public class ElsyChavezWorld {
         Jugador jugador = new Jugador();
         jugador.random();
           
-//        if(jugador.getNombreRaza() == "mago"){
-//            Menu menu = Menu.getInstance();
-//            menu.menu();
-//        }
+//      if(jugador.getNombreRaza() == "mago"){
+//          Menu menu = Menu.getInstance();
+//          menu.menu();
+//       }
+
+//            MenuD menud = MenuD.getInstance();
+//            menud.menud();
+        
+
     }
     
 }

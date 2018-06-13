@@ -19,20 +19,48 @@ public class FactoryEdificacion implements AbstractFactory{
     @Override
     public Edificaciones getEdificacion(String type){
         switch (type){
-            case "recolector1":
+            case "recolector1M":
                 return new RecolectorGaleon();
-            case "recolector2":
+            case "recolector2M":
                 return new RecolectorSickle();
-            case "recolector3":
+            case "recolector3M":
                 return new RecolectorKnut();
-            case "fabrica1":
+            case "fabrica1M":
                 return new FabricaEscoba();
-            case "fabrica2":
+            case "fabrica2M":
                 return new FabricaAutoVolador();
-            case "cuartel":
+            case "cuartelM":
                 return new CuartelMagos();
-            case "centro":
+            case "centroM":
                 return new CentroMandoMagos();
+            case "recolector1D":
+                return new RecolectorSangre();
+            case "recolector2D":
+                return new RecolectorDienteDragon();
+            case "recolector3D":
+                return new RecolectorVeneno();
+            case "fabrica1D":
+                return new FabricaNave();
+            case "fabrica2D":
+                return new FabricaJuggernaut();
+            case "cuartelD":
+                return new CuartelDark();
+            case "centroD":
+                return new CentroMandoDark();
+            case "recolector1MU":
+                return new RecolectorDinero();
+            case "recolector2MU":
+                return new RecolectorCredito();
+            case "recolector3MU":
+                return new RecolectorCupon();
+            case "fabrica1MU":
+                return new FabricaAvioneta();
+            case "fabrica2MU":
+                return new FabricaTanque();
+            case "cuartelMU":
+                return new CuartelMuggle();
+            case "centroMU":
+                return new CentroMandoMuggle();
         }
         return null;
     }

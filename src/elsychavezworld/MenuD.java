@@ -15,44 +15,44 @@ import vehiculos.Vehiculos;
 
 /**
  *
- * @author elsyc
+ * @author Ivis Chavez
  */
-public class Menu {
-    private static Menu menu;
+public class MenuD {
+    private static MenuD menud;
 
-    private Menu() {
+    private MenuD() {
     }
 
-    public static Menu getInstance() {
-        if (menu == null) {
-            menu = new Menu();
+    public static MenuD getInstance() {
+        if (menud == null) {
+            menud = new MenuD();
         }
         
-        return menu;
+        return menud;
     }
 
     public void escogerMago() {
         System.out.println("***Menu jugador mago***");
-        System.out.println("1. Construir cuartel de magos");
-        System.out.println("2. Construir recolector de galeones");
-        System.out.println("3. Construir recolector de sickles");
-        System.out.println("4. Construir recolector de knuts");
-        System.out.println("5. Construir fabrica de escobas");
-        System.out.println("6. Construir fabrica de auto volador");
-        System.out.println("7. Recolectar galeones");
-        System.out.println("8. Recolectar sickles");
-        System.out.println("9. Recolectar knuts");
-        System.out.println("10. Armar escoba");
-        System.out.println("11. Armar autovolador");
-        System.out.println("12. Entrenar escuadrones de magos");
-        System.out.println("13. Entrenar especialista mago");
+        System.out.println("1. Construir cuartel de Dark Siders");
+        System.out.println("2. Construir recolector de sangre");
+        System.out.println("3. Construir recolector de diente de dragon");
+        System.out.println("4. Construir recolector de veneno");
+        System.out.println("5. Construir fabrica de naves");
+        System.out.println("6. Construir fabrica de juggernauts");
+        System.out.println("7. Recolectar sangre");
+        System.out.println("8. Recolectar diente de dragon");
+        System.out.println("9. Recolectar veneno");
+        System.out.println("10. Armar nave");
+        System.out.println("11. Armar juggernaut");
+        System.out.println("12. Entrenar escuadrones Dark");
+        System.out.println("13. Entrenar especialista Dark");
         System.out.println("14. Atacar enemigo");
         System.out.println("15. Defender territorio");
         System.out.println("16. Terminar Turno");
         System.out.println("Ingrese la opcion que desea ejecutar: ");
     }
 
-    public void menu() {
+    public void menud() {
         int x = 0;
         Scanner M = new Scanner(System.in);
         AbstractFactory factoryE, factoryM, factoryRe,factoryVe;
@@ -70,27 +70,27 @@ public class Menu {
 
                 switch (x) {
                     case 1:
-                        Edificaciones cuartel = factoryE.getEdificacion("cuartelM");
+                        Edificaciones cuartel = factoryE.getEdificacion("cuartelD");
                         cuartel.construir();
                         break;
                     case 2:
-                        Edificaciones recolector1 = factoryE.getEdificacion("recolector1M");
+                        Edificaciones recolector1 = factoryE.getEdificacion("recolector1D");
                         recolector1.construir();
                         break;
                     case 3:
-                        Edificaciones recolector2 = factoryE.getEdificacion("recolector2M");
+                        Edificaciones recolector2 = factoryE.getEdificacion("recolector2D");
                         recolector2.construir();
                         break;
                     case 4:
-                        Edificaciones recolector3 = factoryE.getEdificacion("recolector3M");
+                        Edificaciones recolector3 = factoryE.getEdificacion("recolector3D");
                         recolector3.construir();
                         break;
                     case 5:
-                        Edificaciones fabrica1 = factoryE.getEdificacion("fabrica1M");
+                        Edificaciones fabrica1 = factoryE.getEdificacion("fabrica1D");
                         fabrica1.construir();
                         break;
                     case 6:
-                        Edificaciones fabrica2 = factoryE.getEdificacion("fabrica2M");
+                        Edificaciones fabrica2 = factoryE.getEdificacion("fabrica2D");
                         fabrica2.construir();
                         break;
                     case 7:
@@ -103,31 +103,31 @@ public class Menu {
                         //recolectar3();
                         break;
                     case 10:
-                        Vehiculos vehiculo1 = factoryVe.getVehiculo("escoba");
+                        Vehiculos vehiculo1 = factoryVe.getVehiculo("nave");
                         vehiculo1.armar();
                         break;
                     case 11:
-                        Vehiculos vehiculo2 = factoryVe.getVehiculo("autovolador");
+                        Vehiculos vehiculo2 = factoryVe.getVehiculo("juggernaut");
                         vehiculo2.armar();
                         break;
                     case 12:
-                        Milicia escuadron = factoryM.getMilicia("escuadronmagos");
+                        Milicia escuadron = factoryM.getMilicia("escuadrondark");
                         escuadron.entrenar();
                         break;
                     case 13:
-                        Milicia especialista = factoryM.getMilicia("especialistamago");
+                        Milicia especialista = factoryM.getMilicia("especialistadark");
                         especialista.entrenar();
                         break;
                     case 14:
-                        Milicia atacante1 = factoryM.getMilicia("escuadronmagos");
+                        Milicia atacante1 = factoryM.getMilicia("escuadrondark");
                         atacante1.atacar();
-                        Milicia atacante2 = factoryM.getMilicia("especialistamagos");
+                        Milicia atacante2 = factoryM.getMilicia("especialistadark");
                         atacante2.atacar();
                         break;
                     case 15:
-                        Milicia defensor1 = factoryM.getMilicia("escuadronmagos");
+                        Milicia defensor1 = factoryM.getMilicia("escuadrondark");
                         defensor1.defender();
-                        Milicia defensor2 = factoryM.getMilicia("especialistamago");
+                        Milicia defensor2 = factoryM.getMilicia("especialistadark");
                         defensor2.defender();
                         break;
                     case 16:
