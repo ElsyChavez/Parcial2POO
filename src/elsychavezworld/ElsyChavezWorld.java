@@ -24,7 +24,60 @@ public class ElsyChavezWorld {
 
         Jugador jugador = new Jugador();
         jugador.random();
-          
+        
+        if(jugador.getN() == 1){
+            if(jugador.getNombreRaza().equals("mago")){
+                Menu menu = Menu.getInstance();
+                menu.menu();
+            }
+            else if(jugador.getNombreRaza().equals("darksider")){
+                MenuD menud = MenuD.getInstance();
+                menud.menud();
+            }
+            else if(jugador.getNombreRaza().equals("muggle")){
+                MenuM menum = MenuM.getInstance();
+                menum.menum();
+            }
+            if(jugador.getNombreRaza2().equals("mago")){
+                Menu menu = Menu.getInstance();
+                menu.menu();
+            }
+            else if(jugador.getNombreRaza2().equals("darksider")){
+                MenuD menud = MenuD.getInstance();
+                menud.menud();
+            }
+            else if(jugador.getNombreRaza2().equals("muggle")){
+                MenuM menum = MenuM.getInstance();
+                menum.menum();
+            }
+        }
+        else if(jugador.getN() == 2){
+            if(jugador.getNombreRaza2().equals("mago")){
+                Menu menu = Menu.getInstance();
+                menu.menu();
+            }
+            else if(jugador.getNombreRaza2().equals("darksider")){
+                MenuD menud = MenuD.getInstance();
+                menud.menud();
+            }
+            else if(jugador.getNombreRaza2().equals("muggle")){
+                MenuM menum = MenuM.getInstance();
+                menum.menum();
+            }
+            if(jugador.getNombreRaza().equals("mago")){
+                Menu menu = Menu.getInstance();
+                menu.menu();
+            }
+            else if(jugador.getNombreRaza().equals("darksider")){
+                MenuD menud = MenuD.getInstance();
+                menud.menud();
+            }
+            else if(jugador.getNombreRaza().equals("muggle")){
+                MenuM menum = MenuM.getInstance();
+                menum.menum();
+            }
+        }
+        
 //      if(jugador.getNombreRaza() == "mago"){
 //          Menu menu = Menu.getInstance();
 //          menu.menu();
@@ -35,5 +88,5 @@ public class ElsyChavezWorld {
         
 
     }
-    
 }
+    

@@ -17,7 +17,8 @@ import java.util.Scanner;
 public class Jugador {
     private String nombre, nombreRaza;
     private String nombre2, nombreRaza2;
-    int raza;
+    private int n;
+    int raza, raza2;
 
     public String getNombre() {
         return nombre;
@@ -50,7 +51,14 @@ public class Jugador {
     public void setNombreRaza2(String nombreRaza2) {
         this.nombreRaza2 = nombreRaza2;
     }
-    
+
+    public int getN() {
+        return n;
+    }
+
+    public void setN(int n) {
+        this.n = n;
+    }
     
     
     public void primerMenuJugador1(){
@@ -69,7 +77,21 @@ public class Jugador {
         System.out.println("3. Muggle");
         System.out.println("Raza: ");
         raza = leer.nextInt();
-        System.out.println("\n");
+        
+        while(true){
+            if(raza == raza2){
+                System.out.println("Ya se eligio esta raza, vuelva a escoger: ");
+                System.out.println("Elige tu raza: ");
+                System.out.println("1. Mago");
+                System.out.println("2. Dark Sider");
+                System.out.println("3. Muggle");
+                System.out.println("Raza: ");
+                raza = leer.nextInt();
+            }
+            else{
+                break;
+            }
+        }
         
         if(raza == 1){
             nombreRaza = "mago";
@@ -99,16 +121,30 @@ public class Jugador {
         System.out.println("2. Dark Sider");
         System.out.println("3. Muggle");
         System.out.println("Raza: ");
-        raza = leer.nextInt();
-        System.out.println("\n");
+        raza2 = leer.nextInt();
         
-        if(raza == 1){
+        while(true){
+            if(raza2 == raza){
+                System.out.println("Ya se eligio esta raza, vuelva a escoger: ");
+                System.out.println("Elige tu raza: ");
+                System.out.println("1. Mago");
+                System.out.println("2. Dark Sider");
+                System.out.println("3. Muggle");
+                System.out.println("Raza: ");
+                raza2 = leer.nextInt();
+            }
+            else{
+                break;
+            }
+        }
+        
+        if(raza2 == 1){
             nombreRaza2 = "mago";
         }
-        else if(raza == 2){
+        else if(raza2 == 2){
             nombreRaza2 = "darksider";
                     }
-        else if(raza == 3){
+        else if(raza2 == 3){
             nombreRaza2 = "muggle";
         }
         
@@ -116,7 +152,7 @@ public class Jugador {
     
     public void random(){
         Random rand = new Random();
-        int n = rand.nextInt(2) + 1;
+        n = rand.nextInt(2) + 1;
         if(n == 1){
             primerMenuJugador1();
             primerMenuJugador2();

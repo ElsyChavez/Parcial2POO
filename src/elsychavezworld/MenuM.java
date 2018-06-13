@@ -32,7 +32,7 @@ public class MenuM {
     }
 
     public void escogerMuggle() {
-        System.out.println("***Menu jugador mago***");
+        System.out.println("***Menu jugador muggle***");
         System.out.println("1. Construir cuartel de muggles");
         System.out.println("2. Construir recolector de dinero");
         System.out.println("3. Construir recolector de credito");
@@ -52,7 +52,7 @@ public class MenuM {
         System.out.println("Ingrese la opcion que desea ejecutar: ");
     }
 
-    public void menud() {
+    public void menum() {
         int x = 0;
         Scanner M = new Scanner(System.in);
         AbstractFactory factoryE, factoryM, factoryRe,factoryVe;

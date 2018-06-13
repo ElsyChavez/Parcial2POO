@@ -32,7 +32,7 @@ public class MenuD {
     }
 
     public void escogerMago() {
-        System.out.println("***Menu jugador mago***");
+        System.out.println("***Menu jugador dark sider***");
         System.out.println("1. Construir cuartel de Dark Siders");
         System.out.println("2. Construir recolector de sangre");
         System.out.println("3. Construir recolector de diente de dragon");
