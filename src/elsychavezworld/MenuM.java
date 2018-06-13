@@ -6,11 +6,14 @@
 package elsychavezworld;
 
 import edificaciones.Edificaciones;
+import edificaciones.ListaEdificaciones;
 import factory.AbstractFactory;
 import factory.FactoryProducer;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import milicia.ListaMilicia;
 import milicia.Milicia;
+import vehiculos.ListaVehiculos;
 import vehiculos.Vehiculos;
 
 /**
@@ -33,36 +36,35 @@ public class MenuM {
 
     public void escogerMuggle() {
         System.out.println("***Menu jugador muggle***");
-        System.out.println("1. Construir cuartel de muggles");
-        System.out.println("2. Construir recolector de dinero");
-        System.out.println("3. Construir recolector de credito");
-        System.out.println("4. Construir recolector de cupones");
-        System.out.println("5. Construir fabrica de avionetas");
-        System.out.println("6. Construir fabrica de tanques");
-        System.out.println("7. Recolectar dinero");
-        System.out.println("8. Recolectar credito");
-        System.out.println("9. Recolectar cupones");
-        System.out.println("10. Armar avioneta");
-        System.out.println("11. Armar tanque");
-        System.out.println("12. Entrenar escuadrones de muggles");
-        System.out.println("13. Entrenar especialista muggle");
-        System.out.println("14. Atacar enemigo");
-        System.out.println("15. Defender territorio");
-        System.out.println("16. Terminar Turno");
+        System.out.println("1. Construir");
+        System.out.println("2. Recolectar");
+        System.out.println("3. Armar vehiculo");
+        System.out.println("4. Entrenar tropas");
+        System.out.println("5. Atacar enemigo");
+        System.out.println("6. Defender territorio");
+        System.out.println("7. Mostrar");
+        System.out.println("8. Terminar Turno");
         System.out.println("Ingrese la opcion que desea ejecutar: ");
     }
 
     public void menum() {
         int x = 0;
+        int y = 0;
         Scanner M = new Scanner(System.in);
-        AbstractFactory factoryE, factoryM, factoryRe,factoryVe;
+//        AbstractFactory factoryE, factoryM, factoryRe,factoryVe;
+//        
+//        factoryE =  FactoryProducer.getFactory("edificacion");
+//        factoryM =  FactoryProducer.getFactory("milicia");
+//        factoryRe =  FactoryProducer.getFactory("recursos");
+//        factoryVe =  FactoryProducer.getFactory("vehiculo");
+
+        ListaMilicia listaMili = new ListaMilicia();
+        ListaVehiculos listaVehi = new ListaVehiculos();
+        ListaEdificaciones listaEdi = new ListaEdificaciones(); 
         
-        factoryE =  FactoryProducer.getFactory("edificacion");
-        factoryM =  FactoryProducer.getFactory("milicia");
-        factoryRe =  FactoryProducer.getFactory("recursos");
-        factoryVe =  FactoryProducer.getFactory("vehiculo");
+        listaEdi.agregarCentroMandoMuggle();
         
-        while (x != 16) {
+        while (x != 8) {
             escogerMuggle();
             try {
                 
@@ -70,67 +72,100 @@ public class MenuM {
 
                 switch (x) {
                     case 1:
-                        Edificaciones cuartel = factoryE.getEdificacion("cuartelMU");
-                        cuartel.construir();
+                        System.out.println("1. Construir cuartel de mauggles");
+                        System.out.println("2. Construir recolector de dinero");
+                        System.out.println("3. Construir recolector de credito");
+                        System.out.println("4. Construir recolector de cupones");
+                        System.out.println("5. Construir fabrica de avionetas");
+                        System.out.println("6. Construir fabrica de tanques");
+                        System.out.println("Deseo construir: ");
+                        y = M.nextInt();
+                        if(y == 1){
+                            listaEdi.agregarCuartelMuggle();
+                        }
+                        else if(y == 2){
+                            listaEdi.agregarRecolectorDinero();
+                        }
+                        else if(y == 3){
+                            listaEdi.agregarRecolectorCredito();
+                        }
+                        else if(y == 4){
+                            listaEdi.agregarRecolectorCupon();
+                        }
+                        else if(y == 5){
+                            listaEdi.agregarFabricaAvioneta();
+                        }
+                        else if(y == 6){
+                            listaEdi.agregarFabricaTanque();
+                        }
                         break;
                     case 2:
-                        Edificaciones recolector1 = factoryE.getEdificacion("recolector1MU");
-                        recolector1.construir();
+                        System.out.println("1. Recolectar dinero");
+                        System.out.println("2. Recolectar credito");
+                        System.out.println("3. Recolectar cupones");
+                        System.out.println("Deseo recolectar: ");
+                        y = M.nextInt();
+                        if(y == 1){
+                            System.out.println("Recolectando dinero");;
+                        }
+                        else if(y == 2){
+                            System.out.println("Recolectando credito");
+                        }
+                        else if(y == 3){
+                            System.out.println("Recolectando cupones");
+                        }
                         break;
                     case 3:
-                        Edificaciones recolector2 = factoryE.getEdificacion("recolector2MU");
-                        recolector2.construir();
+                        System.out.println("1. Armar avioneta");
+                        System.out.println("2. Armar tanque");
+                        System.out.println("Deseo armar vehiculo: ");
+                        y = M.nextInt();
+                        if(y == 1){
+                            System.out.println("Armando avioneta");
+                            listaVehi.agregarAvioneta();
+                        }
+                        else if(y == 2){
+                            System.out.println("Armando tanque");
+                            listaVehi.agregarTanque();
+                        }
                         break;
                     case 4:
-                        Edificaciones recolector3 = factoryE.getEdificacion("recolector3MU");
-                        recolector3.construir();
+                        System.out.println("1. Entrenar escuadrones de muggles");
+                        System.out.println("2. Entrenar especialista muggle");
+                        System.out.println("Deseo entrenar: ");
+                        y = M.nextInt();
+                        if(y == 1){
+                            System.out.println("Entrenando escuadron muggle");
+                            listaMili.agregarEscuadronMuggle();
+                        }
+                        else if(y == 2){
+                            System.out.println("Entrenando especialista muggle");
+                            listaMili.agregarEspecialistaMuggle();
+                        }
                         break;
                     case 5:
-                        Edificaciones fabrica1 = factoryE.getEdificacion("fabrica1MU");
-                        fabrica1.construir();
+                        System.out.println("Atacando");
                         break;
                     case 6:
-                        Edificaciones fabrica2 = factoryE.getEdificacion("fabrica2MU");
-                        fabrica2.construir();
+                        System.out.println("Defendiendo");
                         break;
                     case 7:
-                        //recolectar1();
-                        break;
+                        System.out.println("1. Ver edificaciones");
+                        System.out.println("2. Ver recursos");
+                        System.out.println("3. Mostrar tropas");
+                        System.out.println("Deseo ver: ");
+                        y = M.nextInt();
+                        if(y == 1){
+                            System.out.println("Mostrando edificios");
+                        }
+                        else if(y == 2){
+                            System.out.println("Mostrando recursos");
+                        }
+                        else if(y == 3){
+                            System.out.println("Mostrando tropas");
+                        }
+                        break;       
                     case 8:
-                        //recolectar2();
-                        break;
-                    case 9:
-                        //recolectar3();
-                        break;
-                    case 10:
-                        Vehiculos vehiculo1 = factoryVe.getVehiculo("avioneta");
-                        vehiculo1.armar();
-                        break;
-                    case 11:
-                        Vehiculos vehiculo2 = factoryVe.getVehiculo("tanque");
-                        vehiculo2.armar();
-                        break;
-                    case 12:
-                        Milicia escuadron = factoryM.getMilicia("escuadronmuggle");
-                        escuadron.entrenar();
-                        break;
-                    case 13:
-                        Milicia especialista = factoryM.getMilicia("especialistamuggle");
-                        especialista.entrenar();
-                        break;
-                    case 14:
-                        Milicia atacante1 = factoryM.getMilicia("escuadronmuggle");
-                        atacante1.atacar();
-                        Milicia atacante2 = factoryM.getMilicia("especialistamuggle");
-                        atacante2.atacar();
-                        break;
-                    case 15:
-                        Milicia defensor1 = factoryM.getMilicia("escuadronmuggle");
-                        defensor1.defender();
-                        Milicia defensor2 = factoryM.getMilicia("especialistamuggle");
-                        defensor2.defender();
-                        break;
-                    case 16:
                         System.out.println("***Termina turno***");
                         break;
                     default:

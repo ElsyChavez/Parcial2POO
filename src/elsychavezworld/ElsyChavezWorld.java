@@ -5,6 +5,7 @@
  */
 package elsychavezworld;
 
+import java.util.Random;
 import jugador.Jugador;
 
 /**
@@ -22,57 +23,76 @@ public class ElsyChavezWorld {
 //        
 //        menu.menu();
 
-        Jugador jugador = new Jugador();
-        jugador.random();
+        Jugador jugador1 = new Jugador();
+        Jugador jugador2 = new Jugador();
         
-        if(jugador.getN() == 1){
-            if(jugador.getNombreRaza().equals("mago")){
+
+            Random rand = new Random();
+            int n = rand.nextInt(2) + 1;
+            if(n == 1){
+                System.out.println("***Bienvenido jugador 1***");
+                jugador1.CreadorJugador();
+                System.out.println("***Bienvenido jugador 2***");
+                jugador2.CreadorJugador();
+            }
+            else if(n == 2){
+                System.out.println("***Bienvenido jugador 2***");
+                jugador2.CreadorJugador();
+                System.out.println("***Bienvenido jugador 1***");
+                jugador1.CreadorJugador();
+            }
+        
+        
+        
+        
+        if(n == 1){
+            if(jugador1.getNombreRaza().equals("mago")){
                 Menu menu = Menu.getInstance();
                 menu.menu();
             }
-            else if(jugador.getNombreRaza().equals("darksider")){
+            else if(jugador1.getNombreRaza().equals("darksider")){
                 MenuD menud = MenuD.getInstance();
                 menud.menud();
             }
-            else if(jugador.getNombreRaza().equals("muggle")){
+            else if(jugador1.getNombreRaza().equals("muggle")){
                 MenuM menum = MenuM.getInstance();
                 menum.menum();
             }
-            if(jugador.getNombreRaza2().equals("mago")){
+            if(jugador2.getNombreRaza().equals("mago")){
                 Menu menu = Menu.getInstance();
                 menu.menu();
             }
-            else if(jugador.getNombreRaza2().equals("darksider")){
+            else if(jugador2.getNombreRaza().equals("darksider")){
                 MenuD menud = MenuD.getInstance();
                 menud.menud();
             }
-            else if(jugador.getNombreRaza2().equals("muggle")){
+            else if(jugador2.getNombreRaza().equals("muggle")){
                 MenuM menum = MenuM.getInstance();
                 menum.menum();
             }
         }
-        else if(jugador.getN() == 2){
-            if(jugador.getNombreRaza2().equals("mago")){
+        else if(n == 2){
+            if(jugador2.getNombreRaza().equals("mago")){
                 Menu menu = Menu.getInstance();
                 menu.menu();
             }
-            else if(jugador.getNombreRaza2().equals("darksider")){
+            else if(jugador2.getNombreRaza().equals("darksider")){
                 MenuD menud = MenuD.getInstance();
                 menud.menud();
             }
-            else if(jugador.getNombreRaza2().equals("muggle")){
+            else if(jugador2.getNombreRaza().equals("muggle")){
                 MenuM menum = MenuM.getInstance();
                 menum.menum();
             }
-            if(jugador.getNombreRaza().equals("mago")){
+            if(jugador1.getNombreRaza().equals("mago")){
                 Menu menu = Menu.getInstance();
                 menu.menu();
             }
-            else if(jugador.getNombreRaza().equals("darksider")){
+            else if(jugador1.getNombreRaza().equals("darksider")){
                 MenuD menud = MenuD.getInstance();
                 menud.menud();
             }
-            else if(jugador.getNombreRaza().equals("muggle")){
+            else if(jugador1.getNombreRaza().equals("muggle")){
                 MenuM menum = MenuM.getInstance();
                 menum.menum();
             }
