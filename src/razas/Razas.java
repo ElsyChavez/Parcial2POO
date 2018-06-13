@@ -11,4 +11,5 @@ package razas;
  */
 public interface Razas {
     public void seleccionar();
+    public String mostrarRaza(String r);
 }

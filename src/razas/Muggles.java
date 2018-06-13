@@ -10,9 +10,16 @@ package razas;
  * @author elsyc
  */
 public class Muggles implements Razas{
+    String raza = "muggle";
+    
     @Override
     public void seleccionar(){
         System.out.println("Conocemos la tecnologia actual.");
     }
+    @Override
+    public String mostrarRaza(String raza){
+        return raza;
+    }
+    
     
 }

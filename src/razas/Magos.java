@@ -10,9 +10,16 @@ package razas;
  * @author elsyc
  */
 public class Magos implements Razas{
+    String raza = "mago";
+    
     @Override
     public void seleccionar(){
         System.out.println("Somos magicos");
+    }
+    
+    @Override
+    public String mostrarRaza(String raza){
+        return raza;
     }
     
 }

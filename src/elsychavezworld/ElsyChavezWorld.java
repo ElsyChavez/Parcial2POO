@@ -5,6 +5,8 @@
  */
 package elsychavezworld;
 
+import jugador.Jugador;
+
 /**
  *
  * @author elsyc
@@ -16,9 +18,17 @@ public class ElsyChavezWorld {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Menu menu = Menu.getInstance();
-        
-        menu.menu();
+//        Menu menu = Menu.getInstance();
+//        
+//        menu.menu();
+
+        Jugador jugador = new Jugador();
+        jugador.random();
+          
+//        if(jugador.getNombreRaza() == "mago"){
+//            Menu menu = Menu.getInstance();
+//            menu.menu();
+//        }
     }
     
 }
