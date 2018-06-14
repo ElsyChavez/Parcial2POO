@@ -69,4 +69,16 @@ public class ListaMilicia {
         System.out.println("\n");
 
     }
+    
+    public boolean verificarMiembros(String tropa){
+        int cont = 0; int contM = milicia.size();
+        boolean esta = false;
+        while(cont<contM){
+            if(milicia.get(cont).getName().equals(tropa)){
+                esta = true;
+            }
+            cont++;
+        }
+        return esta;
+    }
 }

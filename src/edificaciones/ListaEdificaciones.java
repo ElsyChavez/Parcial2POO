@@ -178,4 +178,32 @@ public ArrayList<Edificaciones> edificio;
     public Edificaciones getRecursos(){      
         return edificio.get(0);
     }
+    
+    public boolean verificarEdificacion(String edif){
+        int cont = 0, contE = edificio.size();
+        boolean esta = false;
+        while(cont<contE){
+            if(edificio.get(cont).getName().equals(edif)){
+                esta = true;
+            }
+            cont++;
+        }
+        return esta;
+    }
+    
+    public int contarEdificacion(String edif){
+        int cont = 0, contE = edificio.size(), canti = 0;
+        while(cont<contE){
+            if(edificio.get(cont).equals(edif)){
+                canti++;
+            }
+            cont++;
+        }
+        return canti;
+    }
+    
+    public int contarTodasEdificaciones(){
+        int contE = edificio.size();
+        return contE;
+    }
 }

@@ -15,4 +15,5 @@ public interface Milicia {
     public void defender();
     public int getVida();
     public int getDanio();
+    public String getName();
 }

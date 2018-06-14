@@ -176,13 +176,46 @@ public class Menu {
                         System.out.println("2. Armar autovolador. Costo: Galeones(400),Sickles(100)");
                         System.out.println("Deseo armar vehiculo: ");
                         y = M.nextInt();
+                        Edificaciones recurso1 = listaEdiM.getRecursos();
+                        int recu11, recu22,recu33,vidaa;
                         if(y == 1){
-                            System.out.println("Armando escoba");
-                            listaVehiM.agregarEscoba();
+                            if(listaEdiM.verificarEdificacion("Fabrica Escoba")){
+                                if(recurso1.getRecurso1()>=200 && recurso1.getRecurso3()>=400){
+                                    System.out.println("Armando escoba");
+                                    listaVehiM.agregarEscoba();
+                                    recu11 = recurso1.getRecurso1()-200;
+                                    recu22 = recurso1.getRecurso2();
+                                    recu33 = recurso1.getRecurso3()-400;
+                                    vidaa = recurso1.getVida();
+                                    recurso1.actualizarRecursos(recu11, recu22, recu33, vidaa);
+                                }
+                                else{
+                                    System.out.println("No tienes los suficientes recursos para construir esta vehiculo.");
+                                }
+                            }
+                            else {
+                                System.out.println("No existe todavia una fabrica de escobas.");
+                            }
+                            
                         }
                         else if(y == 2){
-                            System.out.println("Armando auto volador");
-                            listaVehiM.agregarAutoVolador();
+                            if(listaEdiM.verificarEdificacion("Fabrica Auto Volador")){
+                                if(recurso1.getRecurso1()>=400 && recurso1.getRecurso2()>=100){
+                                    System.out.println("Armando auto volador");
+                                    listaVehiM.agregarAutoVolador();
+                                    recu11 = recurso1.getRecurso1()-400;
+                                    recu22 = recurso1.getRecurso2()-100;
+                                    recu33 = recurso1.getRecurso3();
+                                    vidaa = recurso1.getVida();
+                                    recurso1.actualizarRecursos(recu11, recu22, recu33, vidaa);
+                                }
+                                else{
+                                    System.out.println("No tienes los suficientes recursos para construir esta vehiculo.");
+                                }
+                            }
+                            else{
+                                System.out.println("No existe todavia una fabrica de autos voladores.");
+                            }
                         }
                         break;
                     case 4:
@@ -190,13 +223,40 @@ public class Menu {
                         System.out.println("2. Entrenar especialista mago. Costo: Galeones(100),Knuts(400)");
                         System.out.println("Deseo entrenar: ");
                         y = M.nextInt();
-                        if(y == 1){
-                            System.out.println("Entrenando escuadron mago");
-                            listaMiliM.agregarEscuadronMagos();
+                        Edificaciones recurso2 = listaEdiM.getRecursos();
+                        int recu111, recu222, recu333,vidaaa;
+                        if(listaEdiM.verificarEdificacion("Cuartel Magos")){
+                            if(y == 1){
+                                if(recurso2.getRecurso2()>=200 && recurso2.getRecurso3()>=100){
+                                    System.out.println("Entrenando escuadron mago");
+                                    listaMiliM.agregarEscuadronMagos();
+                                    recu111 = recurso2.getRecurso1();
+                                    recu222 = recurso2.getRecurso2()-200;
+                                    recu333 = recurso2.getRecurso3()-100;
+                                    vidaaa = recurso2.getVida();
+                                    recurso2.actualizarRecursos(recu111, recu222, recu333, vidaaa);
+                                }
+                                else{
+                                    System.out.println("No tienes los suficientes recursos para entrenar esta tropa.");
+                                }
+                            }
+                            else if(y == 2){
+                                if(recurso2.getRecurso1()>=100 && recurso2.getRecurso3()>=400){
+                                    System.out.println("Entrenando especialista mago");
+                                    listaMiliM.agregarEspecialistaMago();
+                                    recu111 = recurso2.getRecurso1()-100;
+                                    recu222 = recurso2.getRecurso2();
+                                    recu333 = recurso2.getRecurso3()-400;
+                                    vidaaa = recurso2.getVida();
+                                    recurso2.actualizarRecursos(recu111, recu222, recu333, vidaaa);
+                                }
+                                else{
+                                    System.out.println("No tienes los suficientes recursos para entrenar esta tropa.");
+                                }
+                            }
                         }
-                        else if(y == 2){
-                            System.out.println("Entrenando especialista mago");
-                            listaMiliM.agregarEspecialistaMago();
+                        else{
+                            System.out.println("No existe todavia un cuartel de magos.");
                         }
                         break;
                     case 5:
@@ -369,13 +429,46 @@ public class Menu {
                             System.out.println("2. Armar juggernaut. Costo: Sangre(400),DienteDragon(100)");
                             System.out.println("Deseo armar vehiculo: ");
                             y = M.nextInt();
+                            Edificaciones recurso1 = listaEdiD.getRecursos();
+                            int recu11, recu22,recu33,vidaa;
                             if(y == 1){
-                                System.out.println("Armando nave");
-                                listaVehiD.agregarNave();
+                                if(listaEdiD.verificarEdificacion("Fabrica Nave")){
+                                    if(recurso1.getRecurso1()>=200 && recurso1.getRecurso3()>=400){
+                                        System.out.println("Armando nave");
+                                        listaVehiD.agregarNave();
+                                        recu11 = recurso1.getRecurso1()-200;
+                                        recu22 = recurso1.getRecurso2();
+                                        recu33 = recurso1.getRecurso3()-400;
+                                        vidaa = recurso1.getVida();
+                                        recurso1.actualizarRecursos(recu11, recu22, recu33, vidaa);
+                                    }
+                                    else{
+                                        System.out.println("No tienes los suficientes recursos para construir esta vehiculo.");
+                                    }
+                                }
+                                else {
+                                    System.out.println("No existe todavia una fabrica de naves.");
+                                }
+
                             }
                             else if(y == 2){
-                                System.out.println("Armando juggernaut");
-                                listaVehiD.agregarJuggernaut();
+                                if(listaEdiD.verificarEdificacion("Fabrica Juggernaut")){
+                                    if(recurso1.getRecurso1()>=400 && recurso1.getRecurso2()>=100){
+                                        System.out.println("Armando juggernaut");
+                                        listaVehiD.agregarJuggernaut();
+                                        recu11 = recurso1.getRecurso1()-400;
+                                        recu22 = recurso1.getRecurso2()-100;
+                                        recu33 = recurso1.getRecurso3();
+                                        vidaa = recurso1.getVida();
+                                        recurso1.actualizarRecursos(recu11, recu22, recu33, vidaa);
+                                    }
+                                    else{
+                                        System.out.println("No tienes los suficientes recursos para construir esta vehiculo.");
+                                    }
+                                }
+                                else{
+                                    System.out.println("No existe todavia una fabrica de juggernauts.");
+                                }
                             }
                             break;
                         case 4:
@@ -383,13 +476,40 @@ public class Menu {
                             System.out.println("2. Entrenar especialista darksider. Costo: Sangre(100),Veneno(400)");
                             System.out.println("Deseo entrenar: ");
                             y = M.nextInt();
-                            if(y == 1){
-                                System.out.println("Entrenando escuadron dark");
-                                listaMiliD.agregarEscuadronDark();
+                            Edificaciones recurso2 = listaEdiD.getRecursos();
+                            int recu111, recu222, recu333,vidaaa;
+                            if(listaEdiD.verificarEdificacion("Cuartel Dark")){
+                                if(y == 1){
+                                    if(recurso2.getRecurso2()>=200 && recurso2.getRecurso3()>=100){
+                                        System.out.println("Entrenando escuadron dark");
+                                        listaMiliD.agregarEscuadronDark();
+                                        recu111 = recurso2.getRecurso1();
+                                        recu222 = recurso2.getRecurso2()-200;
+                                        recu333 = recurso2.getRecurso3()-100;
+                                        vidaaa = recurso2.getVida();
+                                        recurso2.actualizarRecursos(recu111, recu222, recu333, vidaaa);
+                                    }
+                                    else{
+                                        System.out.println("No tienes los suficientes recursos para entrenar esta tropa.");
+                                    }
+                                }
+                                else if(y == 2){
+                                    if(recurso2.getRecurso1()>=100 && recurso2.getRecurso3()>=400){
+                                        System.out.println("Entrenando especialista dark");
+                                        listaMiliD.agregarEspecialistaDark();
+                                        recu111 = recurso2.getRecurso1()-100;
+                                        recu222 = recurso2.getRecurso2();
+                                        recu333 = recurso2.getRecurso3()-400;
+                                        vidaaa = recurso2.getVida();
+                                        recurso2.actualizarRecursos(recu111, recu222, recu333, vidaaa);
+                                    }
+                                    else{
+                                        System.out.println("No tienes los suficientes recursos para entrenar esta tropa.");
+                                    }
+                                }
                             }
-                            else if(y == 2){
-                                System.out.println("Entrenando especialista dark");
-                                listaMiliD.agregarEspecialistaDark();
+                            else{
+                                System.out.println("No existe todavia un cuartel de dark siders.");
                             }
                             break;
                         case 5:
@@ -562,13 +682,46 @@ public class Menu {
                         System.out.println("2. Armar tanque. Costo: Dinero(400), Credito(100)");
                         System.out.println("Deseo armar vehiculo: ");
                         y = M.nextInt();
+                        Edificaciones recurso1 = listaEdiMu.getRecursos();
+                        int recu11, recu22,recu33,vidaa;
                         if(y == 1){
-                            System.out.println("Armando avioneta");
-                            listaVehiMu.agregarAvioneta();
+                            if(listaEdiMu.verificarEdificacion("Fabrica Avioneta")){
+                                if(recurso1.getRecurso1()>=200 && recurso1.getRecurso3()>=400){
+                                    System.out.println("Armando avioneta");
+                                    listaVehiMu.agregarAvioneta();
+                                    recu11 = recurso1.getRecurso1()-200;
+                                    recu22 = recurso1.getRecurso2();
+                                    recu33 = recurso1.getRecurso3()-400;
+                                    vidaa = recurso1.getVida();
+                                    recurso1.actualizarRecursos(recu11, recu22, recu33, vidaa);
+                                }
+                                else{
+                                    System.out.println("No tienes los suficientes recursos para construir esta vehiculo.");
+                                }
+                            }
+                            else {
+                                System.out.println("No existe todavia una fabrica de  avionetas.");
+                            }
+                            
                         }
                         else if(y == 2){
-                            System.out.println("Armando tanque");
-                            listaVehiMu.agregarTanque();
+                            if(listaEdiMu.verificarEdificacion("Fabrica Tanque")){
+                                if(recurso1.getRecurso1()>=400 && recurso1.getRecurso2()>=100){
+                                    System.out.println("Armando tanque");
+                                    listaVehiMu.agregarTanque();
+                                    recu11 = recurso1.getRecurso1()-400;
+                                    recu22 = recurso1.getRecurso2()-100;
+                                    recu33 = recurso1.getRecurso3();
+                                    vidaa = recurso1.getVida();
+                                    recurso1.actualizarRecursos(recu11, recu22, recu33, vidaa);
+                                }
+                                else{
+                                    System.out.println("No tienes los suficientes recursos para construir esta vehiculo.");
+                                }
+                            }
+                            else{
+                                System.out.println("No existe todavia una fabrica de tanques.");
+                            }
                         }
                         break;
                     case 4:
@@ -576,13 +729,40 @@ public class Menu {
                         System.out.println("2. Entrenar especialista muggle. Costo: Dinero(100), Cupones(400)");
                         System.out.println("Deseo entrenar: ");
                         y = M.nextInt();
-                        if(y == 1){
-                            System.out.println("Entrenando escuadron muggle");
-                            listaMiliMu.agregarEscuadronMuggle();
+                        Edificaciones recurso2 = listaEdiMu.getRecursos();
+                        int recu111, recu222, recu333,vidaaa;
+                        if(listaEdiMu.verificarEdificacion("Cuartel Magos")){
+                            if(y == 1){
+                                if(recurso2.getRecurso2()>=200 && recurso2.getRecurso3()>=100){
+                                    System.out.println("Entrenando escuadron muggle");
+                                    listaMiliMu.agregarEscuadronMuggle();
+                                    recu111 = recurso2.getRecurso1();
+                                    recu222 = recurso2.getRecurso2()-200;
+                                    recu333 = recurso2.getRecurso3()-100;
+                                    vidaaa = recurso2.getVida();
+                                    recurso2.actualizarRecursos(recu111, recu222, recu333, vidaaa);
+                                }
+                                else{
+                                    System.out.println("No tienes los suficientes recursos para entrenar esta tropa.");
+                                }
+                            }
+                            else if(y == 2){
+                                if(recurso2.getRecurso1()>=100 && recurso2.getRecurso3()>=400){
+                                    System.out.println("Entrenando especialista muggle");
+                                    listaMiliMu.agregarEspecialistaMuggle();
+                                    recu111 = recurso2.getRecurso1()-100;
+                                    recu222 = recurso2.getRecurso2();
+                                    recu333 = recurso2.getRecurso3()-400;
+                                    vidaaa = recurso2.getVida();
+                                    recurso2.actualizarRecursos(recu111, recu222, recu333, vidaaa);
+                                }
+                                else{
+                                    System.out.println("No tienes los suficientes recursos para entrenar esta tropa.");
+                                }
+                            }
                         }
-                        else if(y == 2){
-                            System.out.println("Entrenando especialista muggle");
-                            listaMiliMu.agregarEspecialistaMuggle();
+                        else{
+                            System.out.println("No existe todavia un cuartel de muggles.");
                         }
                         break;
                     case 5:

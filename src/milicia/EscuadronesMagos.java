@@ -11,6 +11,11 @@ package milicia;
  */
 public class EscuadronesMagos implements Milicia{
     int vida = 1000, danio = 200;
+    String name = "Escuadron Mago";
+    
+    public String getName(){
+        return name;
+    }
     
     public String toSring(){
         return "Escuadron mago-> Vida = " +vida+ ", Danio = " +danio;
