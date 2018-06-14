@@ -31,7 +31,65 @@ public class Menu {
         
         return menu;
     }
-
+    
+    //Lista para el jugador que elija la raza mago
+    ListaMilicia listaMiliM = new ListaMilicia();
+    ListaVehiculos listaVehiM = new ListaVehiculos();
+    ListaEdificaciones listaEdiM = new ListaEdificaciones(); 
+    
+    //Lista para el jugador que elija la raza dark sider
+    ListaMilicia listaMiliD = new ListaMilicia();
+    ListaVehiculos listaVehiD = new ListaVehiculos();
+    ListaEdificaciones listaEdiD = new ListaEdificaciones(); 
+    
+    //Lista para el jugador que elija la raza muggle (humana)
+    ListaMilicia listaMiliMu = new ListaMilicia();
+    ListaVehiculos listaVehiMu = new ListaVehiculos();
+    ListaEdificaciones listaEdiMu = new ListaEdificaciones(); 
+    
+    boolean seguir = true;
+    Jugador jugador1 = new Jugador();
+    Jugador jugador2 = new Jugador();
+    
+    int n;
+    
+    public void random(){
+        Random rand = new Random();
+        n = rand.nextInt(2) + 1;
+        if(n == 1){
+            System.out.println("***Bienvenido jugador 1***");
+            jugador1.CreadorJugador();
+            System.out.println("***Bienvenido jugador 2***");
+            jugador2.CreadorJugador();
+            while(true){
+                if(jugador1.getNombreRaza().equals(jugador2.getNombreRaza())){
+                    System.out.println("Esta raza ya esta elegida. Escoja de nuevo");
+                    jugador2.CreadorJugador();
+                }
+                else{
+                    break;
+                }
+            }
+        }
+        else if(n == 2){
+            System.out.println("***Bienvenido jugador 2***");
+            jugador2.CreadorJugador();
+            System.out.println("***Bienvenido jugador 1***");
+            jugador1.CreadorJugador();
+            while(true){
+                if(jugador2.getNombreRaza().equals(jugador1.getNombreRaza())){
+                    System.out.println("Esta raza ya esta elegida. Escoja de nuevo");
+                    jugador1.CreadorJugador();
+                }
+                else{
+                    break;
+                }
+            }
+        }
+    }
+    
+    
+    
     public void escoger() {
         System.out.println("1. Construir");
         System.out.println("2. Recolectar");
@@ -48,10 +106,6 @@ public class Menu {
         int x = 0;
         int y = 0;
         Scanner M = new Scanner(System.in);
-        
-        ListaMilicia listaMiliM = new ListaMilicia();
-        ListaVehiculos listaVehiM = new ListaVehiculos();
-        ListaEdificaciones listaEdiM = new ListaEdificaciones(); 
         
         listaEdiM.agregarCentroMandoMago();
         
@@ -276,7 +330,7 @@ public class Menu {
                             listaEdiM.mostrarListaEdificaciones();
                         }
                         else if(y == 2){
-                            System.out.println("Mostrando recursos");
+                            System.out.println("Mostrando vehiculos");
                             listaVehiM.mostrarListaVehiculos();
                         }
                         else if(y == 3){
@@ -301,10 +355,6 @@ public class Menu {
             int x = 0;
             int y = 0;
             Scanner M = new Scanner(System.in);
-
-            ListaMilicia listaMiliD = new ListaMilicia();
-            ListaVehiculos listaVehiD = new ListaVehiculos();
-            ListaEdificaciones listaEdiD = new ListaEdificaciones(); 
 
             listaEdiD.agregarCentroMandoDark();
 
@@ -529,7 +579,7 @@ public class Menu {
                                 listaEdiD.mostrarListaEdificaciones();
                             }
                             else if(y == 2){
-                                System.out.println("Mostrando recursos");
+                                System.out.println("Mostrando vehiculos");
                                 listaVehiD.mostrarListaVehiculos();
                             }
                             else if(y == 3){
@@ -554,10 +604,6 @@ public class Menu {
         int x = 0;
         int y = 0;
         Scanner M = new Scanner(System.in);
-
-        ListaMilicia listaMiliMu = new ListaMilicia();
-        ListaVehiculos listaVehiMu = new ListaVehiculos();
-        ListaEdificaciones listaEdiMu = new ListaEdificaciones(); 
         
         listaEdiMu.agregarCentroMandoMuggle();
         
@@ -802,4 +848,69 @@ public class Menu {
             }
         }
     }
+    
+    int cont = 1;
+    
+    public void menuPrincipal(){
+        random();
+        
+        while(seguir){
+            if(n == 1){
+                System.out.println("**********Fase "+cont+"**********");
+                if(jugador1.getNombreRaza().equals("mago")){
+                    System.out.println("***Menu del jugador " + jugador1.getNombre() + "***");
+                    menu();
+                }
+                else if(jugador1.getNombreRaza().equals("darksider")){
+                    System.out.println("***Menu del jugador " + jugador1.getNombre() + "***");
+                    menud();
+                }
+                else if(jugador1.getNombreRaza().equals("muggle")){
+                    System.out.println("***Menu del jugador " + jugador1.getNombre() + "***");
+                    menum();
+                }
+                if(jugador2.getNombreRaza().equals("mago")){
+                    System.out.println("***Menu del jugador " + jugador2.getNombre() + "***");
+                    menu();
+                }
+                else if(jugador2.getNombreRaza().equals("darksider")){
+                    System.out.println("***Menu del jugador " + jugador2.getNombre() + "***");
+                    menud();
+                }
+                else if(jugador2.getNombreRaza().equals("muggle")){
+                    System.out.println("***Menu del jugador " + jugador2.getNombre() + "***");
+                    menum();
+                }
+            } 
+            else if(n == 2){
+                System.out.println("**********Fase "+cont+"**********");
+                if(jugador2.getNombreRaza().equals("mago")){
+                    System.out.println("***Menu del jugador " + jugador2.getNombre() + "***");
+                    menu();
+                }
+                else if(jugador2.getNombreRaza().equals("darksider")){
+                    System.out.println("***Menu del jugador " + jugador2.getNombre() + "***");
+                    menud();
+                }
+                else if(jugador2.getNombreRaza().equals("muggle")){
+                    System.out.println("***Menu del jugador " + jugador2.getNombre() + "***");
+                    menum();
+                }
+                if(jugador1.getNombreRaza().equals("mago")){
+                    System.out.println("***Menu del jugador " + jugador1.getNombre() + "***");
+                    menu();
+                }
+                else if(jugador1.getNombreRaza().equals("darksider")){
+                    System.out.println("***Menu del jugador " + jugador1.getNombre() + "***");
+                    menud();
+                }
+                else if(jugador1.getNombreRaza().equals("muggle")){
+                    System.out.println("***Menu del jugador " + jugador1.getNombre() + "***");
+                    menum();
+                }
+            }
+            cont++;
+        }
+    }
 }
+
