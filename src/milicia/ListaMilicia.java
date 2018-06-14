@@ -81,4 +81,30 @@ public class ListaMilicia {
         }
         return esta;
     }
+    
+    public void mostrarMiliciaEnemigo(){
+        int cont =0, contE = milicia.size();
+        while(cont<contE){
+            System.out.println((cont+1)+". "+milicia.get(cont).getName());
+            cont++;
+        }
+    }
+    
+    public int contarTodaMilicia(){
+        int contM = milicia.size();
+        return contM;
+    }
+    
+    public Milicia getMilicias(int puesto){      
+        int cont =0, contM = milicia.size();
+        while(cont<contM){
+            if(milicia.get(cont).equals(milicia.get(puesto-1))){
+                milicia.get(cont);
+            }
+            else{
+                System.out.println("No existe en esta lista.");
+            }
+            cont++;
+        } return milicia.get(puesto-1);
+    }
 }

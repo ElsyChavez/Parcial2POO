@@ -205,4 +205,22 @@ public ArrayList<Edificaciones> edificio;
         int contE = edificio.size();
         return contE;
     }
+    
+    public void mostrarEdificioEnemigo(){
+        int cont =0, contE = edificio.size();
+        while(cont<contE){
+            System.out.println((cont+1)+". "+edificio.get(cont).getName());
+            cont++;
+        }
+    }
+    
+    public Edificaciones getEdificaciones(int puesto){      
+        int cont =0, contE = edificio.size();
+        while(cont<contE){
+            if(edificio.get(cont).equals(edificio.get(puesto-1))){
+                edificio.get(cont);
+            }
+            cont++;
+        }return edificio.get(puesto-1);
+    }
 }

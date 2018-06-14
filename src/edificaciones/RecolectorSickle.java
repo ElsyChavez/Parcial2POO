@@ -54,4 +54,9 @@ public class RecolectorSickle implements Edificaciones{
     public String getName(){
         return name;
     }
+    
+    @Override
+    public void actualizarVida(int vida){
+        this.vida = vida;
+    }
 }

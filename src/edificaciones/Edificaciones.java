@@ -17,4 +17,5 @@ public interface Edificaciones {
     public int getRecurso3();
     public int getVida();
     public void actualizarRecursos(int recu1,int recu2,int recu3, int vida);
+    public void actualizarVida(int vida);
 }

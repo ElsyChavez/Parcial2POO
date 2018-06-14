@@ -54,4 +54,9 @@ public class RecolectorKnut implements Edificaciones{
         return name;
     }
     
+    @Override
+    public void actualizarVida(int vida){
+        this.vida = vida;
+    }
+    
 }

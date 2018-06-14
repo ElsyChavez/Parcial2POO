@@ -54,4 +54,8 @@ public class CentroMandoMagos implements Edificaciones{
         return name;
     }
     
+    @Override
+    public void actualizarVida(int vida){
+        this.vida = vida;
+    }
 }

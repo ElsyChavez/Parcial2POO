@@ -69,4 +69,12 @@ public class ListaVehiculos {
         System.out.println("\n");
 
     }    
+    
+    public void mostrarVehiculosEnemigo(){
+        int cont =0, contV = vehiculo.size();
+        while(cont<contV){
+            System.out.println((cont+1)+". "+vehiculo.get(cont).getName());
+            cont++;
+        }
+    }
 }

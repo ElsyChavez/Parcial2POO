@@ -53,5 +53,10 @@ public class RecolectorCupon implements Edificaciones{
     @Override
     public String getName(){
         return name;
-    }   
+    }  
+    
+    @Override
+    public void actualizarVida(int vida){
+        this.vida = vida;
+    }
 }
