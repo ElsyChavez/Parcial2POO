@@ -146,9 +146,9 @@ public class Menu {
                         System.out.println("Defendiendo");
                         break;
                     case 7:
-                        System.out.println("1. Ver edificaciones");
-                        System.out.println("2. Ver recursos");
-                        System.out.println("3. Mostrar tropas");
+                        System.out.println("1. Ver edificaciones actuales");
+                        System.out.println("2. Ver vehiculos actuales");
+                        System.out.println("3. Ver tropas actuales");
                         System.out.println("Deseo ver: ");
                         y = M.nextInt();
                         if(y == 1){
@@ -157,9 +157,11 @@ public class Menu {
                         }
                         else if(y == 2){
                             System.out.println("Mostrando recursos");
+                            listaVehiM.mostrarListaVehiculos();
                         }
                         else if(y == 3){
                             System.out.println("Mostrando tropas");
+                            listaMiliM.mostrarListaMilicia();
                         }
                         break;
                     case 8:
@@ -169,7 +171,7 @@ public class Menu {
                         System.out.println("Por favor ingresa un valor valido");      
                 }
             } catch (InputMismatchException E){
-                System.err.println("Debes ingresar un # entero");
+                System.err.println("Debe ingresar un numero entero");
                 M.nextLine();
             }
         }
@@ -278,9 +280,9 @@ public class Menu {
                             System.out.println("Defendiendo");
                             break;
                         case 7:
-                            System.out.println("1. Ver edificaciones");
-                            System.out.println("2. Ver recursos");
-                            System.out.println("3. Mostrar tropas");
+                            System.out.println("1. Ver edificaciones actuales");
+                            System.out.println("2. Ver vehiculos actuales");
+                            System.out.println("3. Ver tropas actuales");
                             System.out.println("Deseo ver: ");
                             y = M.nextInt();
                             if(y == 1){
@@ -289,9 +291,11 @@ public class Menu {
                             }
                             else if(y == 2){
                                 System.out.println("Mostrando recursos");
+                                listaVehiD.mostrarListaVehiculos();
                             }
                             else if(y == 3){
                                 System.out.println("Mostrando tropas");
+                                listaMiliD.mostrarListaMilicia();
                             }
                             break;
                         case 8:
@@ -301,7 +305,7 @@ public class Menu {
                             System.out.println("Por favor ingresa un valor valido");      
                     }
                 } catch (InputMismatchException E){
-                    System.err.println("Debes ingresar un # entero");
+                    System.err.println("Debe ingresar un numero entero");
                     M.nextLine();
                 }
             }
@@ -410,9 +414,9 @@ public class Menu {
                         System.out.println("Defendiendo");
                         break;
                     case 7:
-                        System.out.println("1. Ver edificaciones");
-                        System.out.println("2. Ver recursos");
-                        System.out.println("3. Mostrar tropas");
+                        System.out.println("1. Ver edificaciones actuales");
+                        System.out.println("2. Ver vehiculos actuales");
+                        System.out.println("3. Ver tropas actuales");
                         System.out.println("Deseo ver: ");
                         y = M.nextInt();
                         if(y == 1){
@@ -420,10 +424,12 @@ public class Menu {
                             listaEdiMu.mostrarListaEdificaciones();
                         }
                         else if(y == 2){
-                            System.out.println("Mostrando recursos");
+                            System.out.println("Mostrando vehiculos");
+                            listaVehiMu.mostrarListaVehiculos();
                         }
                         else if(y == 3){
                             System.out.println("Mostrando tropas");
+                            listaMiliMu.mostrarListaMilicia();
                         }
                         break;       
                     case 8:
@@ -433,7 +439,7 @@ public class Menu {
                         System.out.println("Por favor ingresa un valor valido");      
                 }
             } catch (InputMismatchException E){
-                System.err.println("Debes ingresar un # entero");
+                System.err.println("Debe ingresar un numero entero");
                 M.nextLine();
             }
         }

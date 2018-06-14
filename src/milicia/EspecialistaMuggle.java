@@ -11,6 +11,21 @@ package milicia;
  */
 public class EspecialistaMuggle implements Milicia{
     int vida = 1500, danio = 600;
+    
+    public String toSring(){
+        return "Especialista Muggle-> Vida = " +vida+ ", Danio = " +danio;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    @Override
+    public int getDanio(){
+        return danio;
+    }
+    
     @Override
     public void entrenar(){
         System.out.println("Entrenando especialista muggle");

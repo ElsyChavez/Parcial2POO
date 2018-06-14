@@ -11,6 +11,21 @@ package milicia;
  */
 public class EscuadronMuggle implements Milicia{
     int vida = 1000, danio = 300;
+    
+    public String toSring(){
+        return "Escuadron Muggle-> Vida = " +vida+ ", Danio = " +danio;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    @Override
+    public int getDanio(){
+        return danio;
+    }
+    
     @Override
     public void entrenar(){
         System.out.println("Entrenando escuadron de muggles");

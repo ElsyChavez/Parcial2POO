@@ -10,6 +10,12 @@ package vehiculos;
  * @author Ivis Chavez
  */
 public class Tanque implements Vehiculos{
+    int vida = 500;
+    
+    public String toString(){
+        return "Tanque-> Vida = "+vida;
+    }
+    
     @Override
     public void armar(){
         System.out.println("Haciendo tanque");

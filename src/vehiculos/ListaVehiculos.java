@@ -62,7 +62,7 @@ public class ListaVehiculos {
         vehiculo.add(tanque);
     }
     
-    public void mostrarListaEdificaciones(){
+    public void mostrarListaVehiculos(){
         vehiculo.forEach((vhc) -> {
             System.out.println(vhc.toString());
         });

@@ -11,6 +11,21 @@ package milicia;
  */
 public class EscuadronDark implements Milicia{
     int vida = 1000, danio = 500;
+    
+    public String toSring(){
+        return "Escuadron Dark-> Vida = " +vida+ ", Danio = " +danio;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    @Override
+    public int getDanio(){
+        return danio;
+    }
+    
     @Override
     public void entrenar(){
         System.out.println("Entrenando escuadron de DarkSiders");

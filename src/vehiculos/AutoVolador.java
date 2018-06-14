@@ -10,6 +10,12 @@ package vehiculos;
  * @author elsyc
  */
 public class AutoVolador implements Vehiculos{
+    int vida = 500;
+    
+    public String toString(){
+        return "Auto volador-> Vida = "+vida;
+    }
+    
     @Override
     public void armar(){
         System.out.println("Haciendo auto volador");

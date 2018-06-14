@@ -10,6 +10,12 @@ package vehiculos;
  * @author elsyc
  */
 public class Escoba implements Vehiculos{
+    int vida = 500;
+    
+    public String toString(){
+        return "Escoba-> Vida = "+vida;
+    }
+    
     @Override
     public void armar(){
         System.out.println("Haciendo escoba");

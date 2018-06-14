@@ -11,6 +11,21 @@ package milicia;
  */
 public class EspecialistaDark implements Milicia{
     int vida = 1500, danio = 700;
+    
+    public String toSring(){
+        return "Especialista Dark-> Vida = " +vida+ ", Danio = " +danio;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    @Override
+    public int getDanio(){
+        return danio;
+    }
+    
     @Override
     public void entrenar(){
         System.out.println("Entrenando especialista DarkSider");

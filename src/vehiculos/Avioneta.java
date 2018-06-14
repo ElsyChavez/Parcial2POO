@@ -10,6 +10,12 @@ package vehiculos;
  * @author Ivis Chavez
  */
 public class Avioneta implements Vehiculos{
+    int vida = 500;
+    
+    public String toString(){
+        return "Avioneta-> Vida = "+vida;
+    }
+    
     @Override
     public void armar(){
         System.out.println("Haciendo avioneta");

@@ -13,4 +13,6 @@ public interface Milicia {
     public void entrenar();
     public void atacar();
     public void defender();
+    public int getVida();
+    public int getDanio();
 }
