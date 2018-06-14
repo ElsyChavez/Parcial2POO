@@ -11,9 +11,31 @@ package vehiculos;
  */
 public class Avioneta implements Vehiculos{
     int vida = 500;
+    int danio = 400;
+    String name = "Avioneta";
+    
+    @Override 
+    public String getName(){
+        return name;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    @Override 
+    public int getDanio(){
+        return danio;
+    }
+    
+    @Override 
+    public void actualizarVida(int vida){
+        this.vida = vida;
+    }
     
     public String toString(){
-        return "Avioneta-> Vida = "+vida;
+        return "Avioneta-> Vida = "+vida+", Danio = "+danio;
     }
     
     @Override

@@ -11,9 +11,31 @@ package vehiculos;
  */
 public class Juggernaut implements Vehiculos{
     int vida = 500;
+    int danio = 500;
+    String name = "Juggernaut";
+    
+    @Override 
+    public String getName(){
+        return name;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    @Override 
+    public int getDanio(){
+        return danio;
+    }
+    
+    @Override 
+    public void actualizarVida(int vida){
+        this.vida = vida;
+    }
     
     public String toString(){
-        return "Juggernaut-> Vida = "+vida;
+        return "Juggernaut-> Vida = "+vida+", Danio = "+danio;
     }
     
     @Override

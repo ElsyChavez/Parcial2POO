@@ -11,4 +11,8 @@ package vehiculos;
  */
 public interface Vehiculos {
     public void armar();
+    public String getName();
+    public int getVida();
+    public void actualizarVida(int vida);
+    public int getDanio();
 }
