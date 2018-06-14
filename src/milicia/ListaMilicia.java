@@ -63,8 +63,8 @@ public class ListaMilicia {
     }
     
     public void mostrarListaMilicia(){
-        milicia.forEach((mlc) -> {
-            System.out.println(mlc.toString());
+        milicia.forEach((mca) -> {
+            System.out.println(mca.toString());
         });
         System.out.println("\n");
 

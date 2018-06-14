@@ -731,7 +731,7 @@ public class Menu {
                         y = M.nextInt();
                         Edificaciones recurso2 = listaEdiMu.getRecursos();
                         int recu111, recu222, recu333,vidaaa;
-                        if(listaEdiMu.verificarEdificacion("Cuartel Magos")){
+                        if(listaEdiMu.verificarEdificacion("Cuartel Muggle")){
                             if(y == 1){
                                 if(recurso2.getRecurso2()>=200 && recurso2.getRecurso3()>=100){
                                     System.out.println("Entrenando escuadron muggle");

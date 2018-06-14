@@ -172,7 +172,6 @@ public ArrayList<Edificaciones> edificio;
             System.out.println(edf.toString());
         });
         System.out.println("\n");
-
     }
     
     public Edificaciones getRecursos(){      

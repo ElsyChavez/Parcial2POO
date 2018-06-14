@@ -13,11 +13,12 @@ public class EspecialistaMago implements Milicia {
     int vida = 1500, danio = 500;
     String name = "Especialista Mago";
     
+    @Override
     public String getName(){
         return name;
     }
     
-    public String toSring(){
+    public String toString(){
         return "Especialista Mago-> Vida = " +vida+ ", Danio = " +danio;
     }
     

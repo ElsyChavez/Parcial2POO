@@ -13,11 +13,12 @@ public class EscuadronesMagos implements Milicia{
     int vida = 1000, danio = 200;
     String name = "Escuadron Mago";
     
+    @Override
     public String getName(){
         return name;
     }
     
-    public String toSring(){
+    public String toString(){
         return "Escuadron mago-> Vida = " +vida+ ", Danio = " +danio;
     }
     
