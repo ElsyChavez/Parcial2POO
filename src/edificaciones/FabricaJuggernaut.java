@@ -12,6 +12,32 @@ package edificaciones;
 public class FabricaJuggernaut implements Edificaciones{
     int vida = 1000;
     String name = "Fabrica Juggernaut";
+    int sangre, dientedragon, veneno;
+   
+    @Override
+    public int getRecurso1(){
+        return sangre;
+    }
+    
+    @Override
+    public int getRecurso2(){
+        return dientedragon;
+    }
+    
+    @Override
+    public int getRecurso3(){
+        return veneno;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    public String toString() {
+            return "Fabrica de juggernauts-> Vida = "+vida;
+    }
+    
     @Override
     public void construir(){
         System.out.println("Construyendo fabrica de vehiculos 2 de la raza DarkSider");

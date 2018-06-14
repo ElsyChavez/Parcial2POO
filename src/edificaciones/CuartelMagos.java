@@ -12,6 +12,31 @@ package edificaciones;
 public class CuartelMagos implements Edificaciones{
     int vida = 1000;
     String name = "Cuartel Magos";
+    int galeon, sickle, knut;
+   
+    @Override
+    public int getRecurso1(){
+        return galeon;
+    }
+    
+    @Override
+    public int getRecurso2(){
+        return sickle;
+    }
+    
+    @Override
+    public int getRecurso3(){
+        return knut;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    public String toString() {
+            return "Cuartel Magos-> Vida = "+vida;
+    }
 
     @Override
     public void construir(){

@@ -14,6 +14,31 @@ import factory.AbstractFactory;
 public class RecolectorGaleon implements Edificaciones{
     int vida = 1000;
     String name = "Recolector Galeon";
+    int galeon = 0, sickle, knut;
+   
+    @Override
+    public int getRecurso1(){
+        return galeon;
+    }
+    
+    @Override
+    public int getRecurso2(){
+        return sickle;
+    }
+    
+    @Override
+    public int getRecurso3(){
+        return knut;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    public String toString() {
+            return "Recolector Galeon-> Recursos: Galeon("+galeon+"). Vida = "+vida;
+    }
 
     @Override
     public void construir(){

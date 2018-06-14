@@ -5,18 +5,13 @@
  */
 package elsychavezworld;
 
-import edificaciones.Edificaciones;
 import edificaciones.ListaEdificaciones;
-import factory.AbstractFactory;
-import factory.FactoryProducer;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 import jugador.Jugador;
 import milicia.ListaMilicia;
-import milicia.Milicia;
 import vehiculos.ListaVehiculos;
-import vehiculos.Vehiculos;
 
 /**
  *
@@ -117,8 +112,8 @@ public class Menu {
                         }
                         break;
                     case 3:
-                        System.out.println("1. Armar escoba");
-                        System.out.println("2. Armar autovolador");
+                        System.out.println("1. Armar escoba. Costo: Galeones(200),Knuts(400)");
+                        System.out.println("2. Armar autovolador. Costo: Galeones(400),Sickles(100)");
                         System.out.println("Deseo armar vehiculo: ");
                         y = M.nextInt();
                         if(y == 1){
@@ -131,8 +126,8 @@ public class Menu {
                         }
                         break;
                     case 4:
-                        System.out.println("1. Entrenar escuadrones de magos");
-                        System.out.println("2. Entrenar especialista mago");
+                        System.out.println("1. Entrenar escuadrones de magos. Costo: Sickles(200),Knuts(100)");
+                        System.out.println("2. Entrenar especialista mago. Costo: Galeones(100),Knuts(400)");
                         System.out.println("Deseo entrenar: ");
                         y = M.nextInt();
                         if(y == 1){
@@ -158,6 +153,7 @@ public class Menu {
                         y = M.nextInt();
                         if(y == 1){
                             System.out.println("Mostrando edificios");
+                            listaEdiM.mostrarListaEdificaciones();
                         }
                         else if(y == 2){
                             System.out.println("Mostrando recursos");
@@ -248,8 +244,8 @@ public class Menu {
                             }
                             break;
                         case 3:
-                            System.out.println("1. Armar nave");
-                            System.out.println("2. Armar juggernaut");
+                            System.out.println("1. Armar nave. Costo: Sangre(200), Veneno(400)");
+                            System.out.println("2. Armar juggernaut. Costo: Sangre(400),DienteDragon(100)");
                             System.out.println("Deseo armar vehiculo: ");
                             y = M.nextInt();
                             if(y == 1){
@@ -262,8 +258,8 @@ public class Menu {
                             }
                             break;
                         case 4:
-                            System.out.println("1. Entrenar escuadrones de darksiders");
-                            System.out.println("2. Entrenar especialista darksider");
+                            System.out.println("1. Entrenar escuadrones de darksiders. Costo: DienteDragon(200),Veneno(100)");
+                            System.out.println("2. Entrenar especialista darksider. Costo: Sangre(100),Veneno(400)");
                             System.out.println("Deseo entrenar: ");
                             y = M.nextInt();
                             if(y == 1){
@@ -289,6 +285,7 @@ public class Menu {
                             y = M.nextInt();
                             if(y == 1){
                                 System.out.println("Mostrando edificios");
+                                listaEdiD.mostrarListaEdificaciones();
                             }
                             else if(y == 2){
                                 System.out.println("Mostrando recursos");
@@ -379,8 +376,8 @@ public class Menu {
                         }
                         break;
                     case 3:
-                        System.out.println("1. Armar avioneta");
-                        System.out.println("2. Armar tanque");
+                        System.out.println("1. Armar avioneta. Costo: Dinero(200), Cupones(400)");
+                        System.out.println("2. Armar tanque. Costo: Dinero(400), Credito(100)");
                         System.out.println("Deseo armar vehiculo: ");
                         y = M.nextInt();
                         if(y == 1){
@@ -393,8 +390,8 @@ public class Menu {
                         }
                         break;
                     case 4:
-                        System.out.println("1. Entrenar escuadrones de muggles");
-                        System.out.println("2. Entrenar especialista muggle");
+                        System.out.println("1. Entrenar escuadrones de muggles. Costo: Credito(200), Cupones(100)");
+                        System.out.println("2. Entrenar especialista muggle. Costo: Dinero(100), Cupones(400)");
                         System.out.println("Deseo entrenar: ");
                         y = M.nextInt();
                         if(y == 1){
@@ -420,6 +417,7 @@ public class Menu {
                         y = M.nextInt();
                         if(y == 1){
                             System.out.println("Mostrando edificios");
+                            listaEdiMu.mostrarListaEdificaciones();
                         }
                         else if(y == 2){
                             System.out.println("Mostrando recursos");

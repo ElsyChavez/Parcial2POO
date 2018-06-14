@@ -12,6 +12,32 @@ package edificaciones;
 public class RecolectorSickle implements Edificaciones{
     int vida = 1000;
     String name = "Recolector Sickle";
+    int galeon, sickle = 0, knut;
+   
+    @Override
+    public int getRecurso1(){
+        return galeon;
+    }
+    
+    @Override
+    public int getRecurso2(){
+        return sickle;
+    }
+    
+    @Override
+    public int getRecurso3(){
+        return knut;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    public String toString() {
+            return "Recolector Sickles-> Recursos: Sickle("+sickle+"). Vida = "+vida;
+    }
+    
     @Override
     public void construir(){
         System.out.println("Construyendo recolector 3,comun");

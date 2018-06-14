@@ -12,4 +12,8 @@ package edificaciones;
 public interface Edificaciones {
     public void construir();
     public String getName();
+    public int getRecurso1();
+    public int getRecurso2();
+    public int getRecurso3();
+    public int getVida();
 }

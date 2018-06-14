@@ -12,6 +12,32 @@ package edificaciones;
 public class FabricaTanque implements Edificaciones{
     int vida = 1000;
     String name = "Fabrica Tanque";
+    int dinero, credito, cupon;
+   
+    @Override
+    public int getRecurso1(){
+        return dinero;
+    }
+    
+    @Override
+    public int getRecurso2(){
+        return credito;
+    }
+    
+    @Override
+    public int getRecurso3(){
+        return cupon;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    public String toString() {
+            return "Fabrica Tanque-> Vida = "+vida;
+    }
+    
     @Override
     public void construir(){
         System.out.println("Construyendo fabrica de vehiculo 2 de la raza DarkSider");

@@ -12,6 +12,31 @@ package edificaciones;
 public class FabricaAutoVolador implements Edificaciones{
     int vida = 1000;
     String name = "Fabrica Auto Volador";
+    int galeon, sickle, knut;
+   
+    @Override
+    public int getRecurso1(){
+        return galeon;
+    }
+    
+    @Override
+    public int getRecurso2(){
+        return sickle;
+    }
+    
+    @Override
+    public int getRecurso3(){
+        return knut;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    public String toString() {
+            return "Fabrica de Auto Volador-> Vida = "+vida;
+    }
 
     @Override
     public void construir(){

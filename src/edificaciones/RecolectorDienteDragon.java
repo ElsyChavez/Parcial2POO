@@ -12,6 +12,31 @@ package edificaciones;
 public class RecolectorDienteDragon implements Edificaciones{
     int vida = 1000;
     String name = "Recolector Diente Dragon";
+    int sangre, dientedragon, veneno = 0;
+   
+    @Override
+    public int getRecurso1(){
+        return sangre;
+    }
+    
+    @Override
+    public int getRecurso2(){
+        return dientedragon;
+    }
+    
+    @Override
+    public int getRecurso3(){
+        return veneno;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    public String toString() {
+            return "Recolector Diente Dragon-> Recursos: DienteDragon(" +dientedragon+ "). Vida = "+vida;
+    }
 
     @Override
     public void construir(){

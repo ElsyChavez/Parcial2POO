@@ -12,6 +12,31 @@ package edificaciones;
 public class RecolectorDinero implements Edificaciones{
     int vida = 1000;
     String name = "Recolector Dinero";
+    int dinero = 0, credito, cupon;
+   
+    @Override
+    public int getRecurso1(){
+        return dinero;
+    }
+    
+    @Override
+    public int getRecurso2(){
+        return credito;
+    }
+    
+    @Override
+    public int getRecurso3(){
+        return cupon;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    public String toString() {
+            return "Recolector Dinero-> Recursos: Dinero("+dinero+"). Vida = "+vida;
+    }
 
     @Override
     public void construir(){

@@ -12,6 +12,31 @@ package edificaciones;
 public class FabricaNave implements Edificaciones{
     int vida = 1000;
     String name = "Fabrica Nave";
+    int sangre, dientedragon, veneno;
+   
+    @Override
+    public int getRecurso1(){
+        return sangre;
+    }
+    
+    @Override
+    public int getRecurso2(){
+        return dientedragon;
+    }
+    
+    @Override
+    public int getRecurso3(){
+        return veneno;
+    }
+    
+    @Override
+    public int getVida(){
+        return vida;
+    }
+    
+    public String toString() {
+            return "Fabrica de naves-> Vida = "+vida;
+    }
 
     @Override
     public void construir(){
