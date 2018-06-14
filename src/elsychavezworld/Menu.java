@@ -67,12 +67,12 @@ public class Menu {
 
                 switch (x) {
                     case 1:
-                        System.out.println("1. Construir cuartel de magos");
-                        System.out.println("2. Construir recolector de galeones");
-                        System.out.println("3. Construir recolector de sickles");
-                        System.out.println("4. Construir recolector de knuts");
-                        System.out.println("5. Construir fabrica de escobas");
-                        System.out.println("6. Construir fabrica de auto volador");
+                        System.out.println("1. Construir cuartel de magos. Costo: Galeones(200), Knuts(300)");
+                        System.out.println("2. Construir recolector de galeones. Costo: Sickles(600), Knuts(400)");
+                        System.out.println("3. Construir recolector de sickles. Costo: Galeones(400), Knuts(200)");
+                        System.out.println("4. Construir recolector de knuts. Costo: Galeones(300), Sickles(300)");
+                        System.out.println("5. Construir fabrica de escobas. Costo: Sickles(400), Knuts(200)");
+                        System.out.println("6. Construir fabrica de auto volador. Costo: Galeones(300), Sickles(100)");
                         System.out.println("Deseo construir: ");
                         y = M.nextInt();
                         if(y == 1){
@@ -167,7 +167,7 @@ public class Menu {
                         }
                         break;
                     case 8:
-                        System.out.println("***Termina turno***");
+                        System.out.println("***Termina turno***\n");
                         break;
                     default:
                         System.out.println("Por favor ingresa un valor valido");      
@@ -198,12 +198,12 @@ public class Menu {
 
                     switch (x) {
                         case 1:
-                            System.out.println("1. Construir cuartel de darksiders");
-                            System.out.println("2. Construir recolector de sangre");
-                            System.out.println("3. Construir recolector de diente de dragon");
-                            System.out.println("4. Construir recolector de veneno");
-                            System.out.println("5. Construir fabrica de naves");
-                            System.out.println("6. Construir fabrica de juggernauts");
+                            System.out.println("1. Construir cuartel de darksiders. Costo: Sangre(200), Veneno(300)");
+                            System.out.println("2. Construir recolector de sangre. Costo: DienteDragon(600), Veneno(400)");
+                            System.out.println("3. Construir recolector de dientes de dragon. Costo: Sangre(400), Veneno(200)");
+                            System.out.println("4. Construir recolector de veneno. Costo: Sangre(300), DienteDragon(300)");
+                            System.out.println("5. Construir fabrica de naves. Costo: DienteDragon(400), Veneno(200)");
+                            System.out.println("6. Construir fabrica de juggernauts. Costo: Sangre(300), DienteDragon(100)");
                             System.out.println("Deseo construir: ");
                             y = M.nextInt();
                             if(y == 1){
@@ -298,7 +298,7 @@ public class Menu {
                             }
                             break;
                         case 8:
-                            System.out.println("***Termina turno***");
+                            System.out.println("***Termina turno***\n");
                             break;
                         default:
                             System.out.println("Por favor ingresa un valor valido");      
@@ -329,12 +329,12 @@ public class Menu {
 
                 switch (x) {
                     case 1:
-                        System.out.println("1. Construir cuartel de mauggles");
-                        System.out.println("2. Construir recolector de dinero");
-                        System.out.println("3. Construir recolector de credito");
-                        System.out.println("4. Construir recolector de cupones");
-                        System.out.println("5. Construir fabrica de avionetas");
-                        System.out.println("6. Construir fabrica de tanques");
+                        System.out.println("1. Construir cuartel de muggles. Costo: Dinero(200), Cupones(300)");
+                        System.out.println("2. Construir recolector de dinero. Costo: Credito(600), Cupones(400)");
+                        System.out.println("3. Construir recolector de credito. Costo: Dinero(400), Cupones(200)");
+                        System.out.println("4. Construir recolector de cupones. Costo: Dinero(300), Credito(300)");
+                        System.out.println("5. Construir fabrica de avionetas. Costo: Credito(400), Cupones(200)");
+                        System.out.println("6. Construir fabrica de tanques. Costo: Dinero(300), Credito(100)");
                         System.out.println("Deseo construir: ");
                         y = M.nextInt();
                         if(y == 1){
@@ -429,7 +429,7 @@ public class Menu {
                         }
                         break;       
                     case 8:
-                        System.out.println("***Termina turno***");
+                        System.out.println("***Termina turno***\n");
                         break;
                     default:
                         System.out.println("Por favor ingresa un valor valido");      
