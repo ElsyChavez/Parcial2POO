@@ -5,6 +5,7 @@
  */
 package elsychavezworld;
 
+import edificaciones.Edificaciones;
 import edificaciones.ListaEdificaciones;
 import java.util.InputMismatchException;
 import java.util.Random;
@@ -70,29 +71,88 @@ public class Menu {
                         System.out.println("6. Construir fabrica de auto volador. Costo: Galeones(300), Sickles(100)");
                         System.out.println("Deseo construir: ");
                         y = M.nextInt();
+                        Edificaciones recurso = listaEdiM.getRecursos();
+                        int recu1,recu2,recu3,vida;
                         if(y == 1){
-                            System.out.println("Construyendo cuartel de magos");
-                            listaEdiM.agregarCuartelMagos();
+                            if(recurso.getRecurso1()>=200 && recurso.getRecurso3()>=300){
+                                System.out.println("Construyendo cuartel de magos");
+                                listaEdiM.agregarCuartelMagos();
+                                recu1=recurso.getRecurso1()-200;
+                                recu2=recurso.getRecurso2();
+                                recu3=recurso.getRecurso3()-300;
+                                vida=recurso.getVida();
+                                recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                            }
+                            else{
+                                System.out.println("No tienes suficientes recursos para construir esto.");
+                            }
                         }
                         else if(y == 2){
-                            System.out.println("Construyendo recolector de galeones");
-                            listaEdiM.agregarRecolectorGaleon();
+                            if(recurso.getRecurso2()>=600 && recurso.getRecurso3()>=400){
+                                System.out.println("Construyendo recolector de galeones");
+                                listaEdiM.agregarRecolectorGaleon();
+                                recu1=recurso.getRecurso1();
+                                recu2=recurso.getRecurso2()-600;
+                                recu3=recurso.getRecurso3()-400;
+                                vida=recurso.getVida();
+                                recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                            }
+                            else{
+                                System.out.println("No tienes suficientes recursos para construir esto.");
+                            }
                         }
                         else if(y == 3){
-                            System.out.println("Construyendo recolector de sickles");
-                            listaEdiM.agregarRecolectorSickle();
+                            if(recurso.getRecurso1()>=400 && recurso.getRecurso3()>=200){
+                                System.out.println("Construyendo recolector de sickles");
+                                listaEdiM.agregarRecolectorSickle();
+                                recu1=recurso.getRecurso1()-400;
+                                recu2=recurso.getRecurso2();
+                                recu3=recurso.getRecurso3()-200;
+                                vida=recurso.getVida();
+                                recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                            }
                         }
                         else if(y == 4){
-                            System.out.println("Construyendo recolector de knuts");
-                            listaEdiM.agregarRecolectorKnuts();
+                            if(recurso.getRecurso1()>=300 && recurso.getRecurso2()>=300){
+                                System.out.println("Construyendo recolector de knuts");
+                                listaEdiM.agregarRecolectorKnuts();
+                                recu1=recurso.getRecurso1()-300;
+                                recu2=recurso.getRecurso2()-300;
+                                recu3=recurso.getRecurso3();
+                                vida=recurso.getVida();
+                                recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                            }
+                            else{
+                                System.out.println("No tienes suficientes recursos para construir esto.");
+                            }
                         }
                         else if(y == 5){
-                            System.out.println("Construyendo fabrica de escobas");
-                            listaEdiM.agregarFabricaEscoba();
+                            if(recurso.getRecurso2()>=400 && recurso.getRecurso3()>=200){
+                                System.out.println("Construyendo fabrica de escobas");
+                                listaEdiM.agregarFabricaEscoba();
+                                recu1=recurso.getRecurso1();
+                                recu2=recurso.getRecurso2()-400;
+                                recu3=recurso.getRecurso3()-200;
+                                vida=recurso.getVida();
+                                recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                            }
+                            else{
+                                System.out.println("No tienes suficientes recursos para construir esto.");
+                            }
                         }
                         else if(y == 6){
-                            System.out.println("Construyendo fabrica de autos voladores");
-                            listaEdiM.agregarFabricaAutoVolador();
+                            if(recurso.getRecurso1()>=300 && recurso.getRecurso2()>=100){
+                                System.out.println("Construyendo fabrica de autos voladores");
+                                listaEdiM.agregarFabricaAutoVolador();
+                                recu1=recurso.getRecurso1()-300;
+                                recu2=recurso.getRecurso2()-100;
+                                recu3=recurso.getRecurso3();
+                                vida=recurso.getVida();
+                                recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                            }
+                            else{
+                                System.out.println("No tienes suficientes recursos para construir esto.");                                
+                            }
                         }
                         break;
                     case 2:
@@ -204,29 +264,88 @@ public class Menu {
                             System.out.println("6. Construir fabrica de juggernauts. Costo: Sangre(300), DienteDragon(100)");
                             System.out.println("Deseo construir: ");
                             y = M.nextInt();
+                            Edificaciones recurso = listaEdiD.getRecursos();
+                            int recu1,recu2,recu3,vida;
                             if(y == 1){
-                                System.out.println("Construyendo cuartel de darksiders");
-                                listaEdiD.agregarCuartelDark();
+                                if(recurso.getRecurso1()>=200 && recurso.getRecurso3()>=300){
+                                    System.out.println("Construyendo cuartel de dark siders");
+                                    listaEdiD.agregarCuartelDark();
+                                    recu1=recurso.getRecurso1()-200;
+                                    recu2=recurso.getRecurso2();
+                                    recu3=recurso.getRecurso3()-300;
+                                    vida=recurso.getVida();
+                                    recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                                }
+                                else{
+                                    System.out.println("No tienes suficientes recursos para construir esto.");
+                                }
                             }
                             else if(y == 2){
-                                System.out.println("Construyendo recolector de sangre");
-                                listaEdiD.agregarRecolectorSangre();
+                                if(recurso.getRecurso2()>=600 && recurso.getRecurso3()>=400){
+                                    System.out.println("Construyendo recolector de sangre");
+                                    listaEdiD.agregarRecolectorSangre();
+                                    recu1=recurso.getRecurso1();
+                                    recu2=recurso.getRecurso2()-600;
+                                    recu3=recurso.getRecurso3()-400;
+                                    vida=recurso.getVida();
+                                    recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                                }
+                                else{
+                                    System.out.println("No tienes suficientes recursos para construir esto.");
+                                }
                             }
                             else if(y == 3){
-                                System.out.println("Construyendo recolector de diente de dragon");
-                                listaEdiD.agregarRecolectorDienteDragon();
+                                if(recurso.getRecurso1()>=400 && recurso.getRecurso3()>=200){
+                                    System.out.println("Construyendo recolector de dientes de dragon");
+                                    listaEdiD.agregarRecolectorDienteDragon();
+                                    recu1=recurso.getRecurso1()-400;
+                                    recu2=recurso.getRecurso2();
+                                    recu3=recurso.getRecurso3()-200;
+                                    vida=recurso.getVida();
+                                    recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                                }
                             }
                             else if(y == 4){
-                                System.out.println("Construyendo recolector de veneno");
-                                listaEdiD.agregarRecolectorVeneno();
+                                if(recurso.getRecurso1()>=300 && recurso.getRecurso2()>=300){
+                                    System.out.println("Construyendo recolector de veneno");
+                                    listaEdiD.agregarRecolectorVeneno();
+                                    recu1=recurso.getRecurso1()-300;
+                                    recu2=recurso.getRecurso2()-300;
+                                    recu3=recurso.getRecurso3();
+                                    vida=recurso.getVida();
+                                    recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                                }
+                                else{
+                                    System.out.println("No tienes suficientes recursos para construir esto.");
+                                }
                             }
                             else if(y == 5){
-                                System.out.println("Construyendo fabrica de naves");
-                                listaEdiD.agregarFabricaNave();
+                                if(recurso.getRecurso2()>=400 && recurso.getRecurso3()>=200){
+                                    System.out.println("Construyendo fabrica de naves");
+                                    listaEdiD.agregarFabricaNave();
+                                    recu1=recurso.getRecurso1();
+                                    recu2=recurso.getRecurso2()-400;
+                                    recu3=recurso.getRecurso3()-200;
+                                    vida=recurso.getVida();
+                                    recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                                }
+                                else{
+                                    System.out.println("No tienes suficientes recursos para construir esto.");
+                                }
                             }
                             else if(y == 6){
-                                System.out.println("Construyendo fabrica de juggernauts");
-                                listaEdiD.agregarFabricaJuggernaut();
+                                if(recurso.getRecurso1()>=300 && recurso.getRecurso2()>=100){
+                                    System.out.println("Construyendo fabrica de juggernauts");
+                                    listaEdiD.agregarFabricaJuggernaut();
+                                    recu1=recurso.getRecurso1()-300;
+                                    recu2=recurso.getRecurso2()-100;
+                                    recu3=recurso.getRecurso3();
+                                    vida=recurso.getVida();
+                                    recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                                }
+                                else{
+                                    System.out.println("No tienes suficientes recursos para construir esto.");                                
+                                }
                             }
                             break;
                         case 2:
@@ -338,29 +457,88 @@ public class Menu {
                         System.out.println("6. Construir fabrica de tanques. Costo: Dinero(300), Credito(100)");
                         System.out.println("Deseo construir: ");
                         y = M.nextInt();
+                        Edificaciones recurso = listaEdiMu.getRecursos();
+                        int recu1,recu2,recu3,vida;
                         if(y == 1){
-                            System.out.println("Construyendo cuartel de muggles");
-                            listaEdiMu.agregarCuartelMuggle();
+                            if(recurso.getRecurso1()>=200 && recurso.getRecurso3()>=300){
+                                System.out.println("Construyendo cuartel de muggles");
+                                listaEdiMu.agregarCuartelMuggle();
+                                recu1=recurso.getRecurso1()-200;
+                                recu2=recurso.getRecurso2();
+                                recu3=recurso.getRecurso3()-300;
+                                vida=recurso.getVida();
+                                recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                            }
+                            else{
+                                System.out.println("No tienes suficientes recursos para construir esto.");
+                            }
                         }
                         else if(y == 2){
-                            System.out.println("Construyendo recolector de dinero");
-                            listaEdiMu.agregarRecolectorDinero();
+                            if(recurso.getRecurso2()>=600 && recurso.getRecurso3()>=400){
+                                System.out.println("Construyendo recolector de dinero");
+                                listaEdiMu.agregarRecolectorDinero();
+                                recu1=recurso.getRecurso1();
+                                recu2=recurso.getRecurso2()-600;
+                                recu3=recurso.getRecurso3()-400;
+                                vida=recurso.getVida();
+                                recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                            }
+                            else{
+                                System.out.println("No tienes suficientes recursos para construir esto.");
+                            }
                         }
                         else if(y == 3){
-                            System.out.println("Construyendo recolector de credito");
-                            listaEdiMu.agregarRecolectorCredito();
+                            if(recurso.getRecurso1()>=400 && recurso.getRecurso3()>=200){
+                                System.out.println("Construyendo recolector de credito");
+                                listaEdiMu.agregarRecolectorCredito();
+                                recu1=recurso.getRecurso1()-400;
+                                recu2=recurso.getRecurso2();
+                                recu3=recurso.getRecurso3()-200;
+                                vida=recurso.getVida();
+                                recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                            }
                         }
                         else if(y == 4){
-                            System.out.println("Construyendo recolector de cupones");
-                            listaEdiMu.agregarRecolectorCupon();
+                            if(recurso.getRecurso1()>=300 && recurso.getRecurso2()>=300){
+                                System.out.println("Construyendo recolector de cupones");
+                                listaEdiMu.agregarRecolectorCupon();
+                                recu1=recurso.getRecurso1()-300;
+                                recu2=recurso.getRecurso2()-300;
+                                recu3=recurso.getRecurso3();
+                                vida=recurso.getVida();
+                                recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                            }
+                            else{
+                                System.out.println("No tienes suficientes recursos para construir esto.");
+                            }
                         }
                         else if(y == 5){
-                            System.out.println("Construyendo fabrica de avionetas");
-                            listaEdiMu.agregarFabricaAvioneta();
+                            if(recurso.getRecurso2()>=400 && recurso.getRecurso3()>=200){
+                                System.out.println("Construyendo fabrica de avionetas");
+                                listaEdiMu.agregarFabricaAvioneta();
+                                recu1=recurso.getRecurso1();
+                                recu2=recurso.getRecurso2()-400;
+                                recu3=recurso.getRecurso3()-200;
+                                vida=recurso.getVida();
+                                recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                            }
+                            else{
+                                System.out.println("No tienes suficientes recursos para construir esto.");
+                            }
                         }
                         else if(y == 6){
-                            System.out.println("Construyendo fabrica de tanques");
-                            listaEdiMu.agregarFabricaTanque();
+                            if(recurso.getRecurso1()>=300 && recurso.getRecurso2()>=100){
+                                System.out.println("Construyendo fabrica de tanques");
+                                listaEdiMu.agregarFabricaTanque();
+                                recu1=recurso.getRecurso1()-300;
+                                recu2=recurso.getRecurso2()-100;
+                                recu3=recurso.getRecurso3();
+                                vida=recurso.getVida();
+                                recurso.actualizarRecursos(recu1, recu2, recu3, vida);
+                            }
+                            else{
+                                System.out.println("No tienes suficientes recursos para construir esto.");                                
+                            }
                         }
                         break;
                     case 2:

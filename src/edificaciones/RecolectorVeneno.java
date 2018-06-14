@@ -34,6 +34,14 @@ public class RecolectorVeneno implements Edificaciones{
         return vida;
     }
     
+    @Override
+    public void actualizarRecursos(int recu1, int recu2, int recu3, int vida){
+        this.sangre = recu1;
+        this.dientedragon = recu2;
+        this.veneno = recu3;
+        this.vida = vida;
+    }
+    
     public String toString() {
             return "Recolector Veneno-> Recursos: Veneno("+veneno+"). Vida = "+vida;
     }

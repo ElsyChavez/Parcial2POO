@@ -34,6 +34,14 @@ public class RecolectorDinero implements Edificaciones{
         return vida;
     }
     
+    @Override
+    public void actualizarRecursos(int recu1, int recu2, int recu3, int vida){
+        this.dinero = recu1;
+        this.credito = recu2;
+        this.cupon = recu3;
+        this.vida = vida;
+    }
+    
     public String toString() {
             return "Recolector Dinero-> Recursos: Dinero("+dinero+"). Vida = "+vida;
     }

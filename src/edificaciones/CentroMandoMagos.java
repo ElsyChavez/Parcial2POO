@@ -12,7 +12,7 @@ package edificaciones;
 public class CentroMandoMagos implements Edificaciones{
     int vida = 10000;
     String name = "Centro Mando Magos";
-    int galeon = 500, sickle = 1000, knut = 600;
+    int galeon = 800, sickle = 1000, knut = 600;
    
     @Override
     public int getRecurso1(){
@@ -32,6 +32,14 @@ public class CentroMandoMagos implements Edificaciones{
     @Override
     public int getVida(){
         return vida;
+    }
+    
+    @Override
+    public void actualizarRecursos(int recu1, int recu2, int recu3, int vida){
+        this.galeon = recu1;
+        this.sickle = recu2;
+        this.knut = recu3;
+        this.vida = vida;
     }
     
     public String toString() {

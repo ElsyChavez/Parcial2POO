@@ -174,4 +174,8 @@ public ArrayList<Edificaciones> edificio;
         System.out.println("\n");
 
     }
+    
+    public Edificaciones getRecursos(){      
+        return edificio.get(0);
+    }
 }

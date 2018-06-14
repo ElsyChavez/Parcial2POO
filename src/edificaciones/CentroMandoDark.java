@@ -12,7 +12,7 @@ package edificaciones;
 public class CentroMandoDark implements Edificaciones{
     int vida = 10000;
     String name = "Centro Mando Dark";
-    int sangre = 500, dientedragon = 1000, veneno = 600;
+    int sangre = 800, dientedragon = 1000, veneno = 600;
    
     @Override
     public int getRecurso1(){
@@ -32,6 +32,14 @@ public class CentroMandoDark implements Edificaciones{
     @Override
     public int getVida(){
         return vida;
+    }
+    
+    @Override
+    public void actualizarRecursos(int recu1, int recu2, int recu3, int vida){
+        this.sangre = recu1;
+        this.dientedragon = recu2;
+        this.veneno = recu3;
+        this.vida = vida;
     }
     
     public String toString() {
