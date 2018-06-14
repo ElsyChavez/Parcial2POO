@@ -11,9 +11,14 @@ package edificaciones;
  */
 public class RecolectorCupon implements Edificaciones{
     int vida = 1000;
+    String name = "Recolector Cupon";
+
     @Override
     public void construir(){
         System.out.println("Construyendo recolector de recurso 3 de la raza Muggle");
     }
-    
+    @Override
+    public String getName(){
+        return name;
+    }   
 }

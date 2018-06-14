@@ -22,6 +22,7 @@ public class ElsyChavezWorld {
         Jugador jugador1 = new Jugador();
         Jugador jugador2 = new Jugador();
         
+        jugador1.introduccion();
 
         Random rand = new Random();
         int n = rand.nextInt(2) + 1;
@@ -30,13 +31,32 @@ public class ElsyChavezWorld {
             jugador1.CreadorJugador();
             System.out.println("***Bienvenido jugador 2***");
             jugador2.CreadorJugador();
+            while(true){
+                if(jugador1.getNombreRaza().equals(jugador2.getNombreRaza())){
+                    System.out.println("Esta raza ya esta elegida. Escoja de nuevo");
+                    jugador2.CreadorJugador();
+                }
+                else{
+                    break;
+                }
             }
+        }
+        
         else if(n == 2){
             System.out.println("***Bienvenido jugador 2***");
             jugador2.CreadorJugador();
             System.out.println("***Bienvenido jugador 1***");
             jugador1.CreadorJugador();
+            while(true){
+                if(jugador2.getNombreRaza().equals(jugador1.getNombreRaza())){
+                    System.out.println("Esta raza ya esta elegida. Escoja de nuevo");
+                    jugador1.CreadorJugador();
+                }
+                else{
+                    break;
+                }
             }
+        }
         
         if(n == 1){
             if(jugador1.getNombreRaza().equals("mago")){
@@ -113,5 +133,7 @@ public class ElsyChavezWorld {
         
 
     }
-}
+        
+    }
+
     

@@ -11,8 +11,13 @@ package edificaciones;
  */
 public class CentroMandoDark implements Edificaciones{
     int vida = 10000;
+    String name = "Centro Mando Dark";
     @Override
     public void construir(){
         System.out.println("Construyendo Edificio mas importante de la raza DarkSider");
+    }
+    @Override
+    public String getName(){
+        return name;
     }
 }

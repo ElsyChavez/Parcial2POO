@@ -11,9 +11,14 @@ package edificaciones;
  */
 public class RecolectorKnut implements Edificaciones{
     int vida = 1000;
+    String name = "Recolector Knut";
     @Override
     public void construir(){
         System.out.println("Construyendo recolector 2, secundario");
+    }
+    @Override
+    public String getName(){
+        return name;
     }
     
 }

@@ -10,6 +10,7 @@ import edificaciones.ListaEdificaciones;
 import factory.AbstractFactory;
 import factory.FactoryProducer;
 import java.util.InputMismatchException;
+import java.util.Random;
 import java.util.Scanner;
 import jugador.Jugador;
 import milicia.ListaMilicia;
@@ -51,19 +52,13 @@ public class Menu {
         int x = 0;
         int y = 0;
         Scanner M = new Scanner(System.in);
-//        AbstractFactory factoryE, factoryM, factoryRe,factoryVe;
         
-//        factoryE =  FactoryProducer.getFactory("edificacion");
-//        factoryM =  FactoryProducer.getFactory("milicia");
-//        factoryRe =  FactoryProducer.getFactory("recursos");
-//        factoryVe =  FactoryProducer.getFactory("vehiculo");
-        ListaMilicia listaMili = new ListaMilicia();
-        ListaVehiculos listaVehi = new ListaVehiculos();
-        ListaEdificaciones listaEdi = new ListaEdificaciones(); 
+        ListaMilicia listaMiliM = new ListaMilicia();
+        ListaVehiculos listaVehiM = new ListaVehiculos();
+        ListaEdificaciones listaEdiM = new ListaEdificaciones(); 
         
-        listaEdi.agregarCentroMandoMago();
+        listaEdiM.agregarCentroMandoMago();
         
-
         while (x != 8) {
             escoger();
             try {
@@ -81,22 +76,28 @@ public class Menu {
                         System.out.println("Deseo construir: ");
                         y = M.nextInt();
                         if(y == 1){
-                            listaEdi.agregarCuartelMagos();
+                            System.out.println("Construyendo cuartel de magos");
+                            listaEdiM.agregarCuartelMagos();
                         }
                         else if(y == 2){
-                            listaEdi.agregarRecolectorGaleon();
+                            System.out.println("Construyendo recolector de galeones");
+                            listaEdiM.agregarRecolectorGaleon();
                         }
                         else if(y == 3){
-                            listaEdi.agregarRecolectorSickle();
+                            System.out.println("Construyendo recolector de sickles");
+                            listaEdiM.agregarRecolectorSickle();
                         }
                         else if(y == 4){
-                            listaEdi.agregarRecolectorKnuts();
+                            System.out.println("Construyendo recolector de knuts");
+                            listaEdiM.agregarRecolectorKnuts();
                         }
                         else if(y == 5){
-                            listaEdi.agregarFabricaEscoba();
+                            System.out.println("Construyendo fabrica de escobas");
+                            listaEdiM.agregarFabricaEscoba();
                         }
                         else if(y == 6){
-                            listaEdi.agregarFabricaAutoVolador();
+                            System.out.println("Construyendo fabrica de autos voladores");
+                            listaEdiM.agregarFabricaAutoVolador();
                         }
                         break;
                     case 2:
@@ -122,11 +123,11 @@ public class Menu {
                         y = M.nextInt();
                         if(y == 1){
                             System.out.println("Armando escoba");
-                            listaVehi.agregarEscoba();
+                            listaVehiM.agregarEscoba();
                         }
                         else if(y == 2){
                             System.out.println("Armando auto volador");
-                            listaVehi.agregarAutoVolador();
+                            listaVehiM.agregarAutoVolador();
                         }
                         break;
                     case 4:
@@ -136,11 +137,11 @@ public class Menu {
                         y = M.nextInt();
                         if(y == 1){
                             System.out.println("Entrenando escuadron mago");
-                            listaMili.agregarEscuadronMagos();
+                            listaMiliM.agregarEscuadronMagos();
                         }
                         else if(y == 2){
                             System.out.println("Entrenando especialista mago");
-                            listaMili.agregarEspecialistaMago();
+                            listaMiliM.agregarEspecialistaMago();
                         }
                         break;
                     case 5:
@@ -183,17 +184,11 @@ public class Menu {
             int y = 0;
             Scanner M = new Scanner(System.in);
 
-    //        AbstractFactory factoryE, factoryM, factoryRe,factoryVe;
-    //        
-    //        factoryE =  FactoryProducer.getFactory("edificacion");
-    //        factoryM =  FactoryProducer.getFactory("milicia");
-    //        factoryRe =  FactoryProducer.getFactory("recursos");
-    //        factoryVe =  FactoryProducer.getFactory("vehiculo");
-            ListaMilicia listaMili = new ListaMilicia();
-            ListaVehiculos listaVehi = new ListaVehiculos();
-            ListaEdificaciones listaEdi = new ListaEdificaciones(); 
+            ListaMilicia listaMiliD = new ListaMilicia();
+            ListaVehiculos listaVehiD = new ListaVehiculos();
+            ListaEdificaciones listaEdiD = new ListaEdificaciones(); 
 
-            listaEdi.agregarCentroMandoDark();
+            listaEdiD.agregarCentroMandoDark();
 
             while (x != 8) {
                 escoger();
@@ -203,7 +198,7 @@ public class Menu {
 
                     switch (x) {
                         case 1:
-                            System.out.println("1. Construir cuartel de magos");
+                            System.out.println("1. Construir cuartel de darksiders");
                             System.out.println("2. Construir recolector de sangre");
                             System.out.println("3. Construir recolector de diente de dragon");
                             System.out.println("4. Construir recolector de veneno");
@@ -212,22 +207,28 @@ public class Menu {
                             System.out.println("Deseo construir: ");
                             y = M.nextInt();
                             if(y == 1){
-                                listaEdi.agregarCuartelDark();
+                                System.out.println("Construyendo cuartel de darksiders");
+                                listaEdiD.agregarCuartelDark();
                             }
                             else if(y == 2){
-                                listaEdi.agregarRecolectorSangre();
+                                System.out.println("Construyendo recolector de sangre");
+                                listaEdiD.agregarRecolectorSangre();
                             }
                             else if(y == 3){
-                                listaEdi.agregarRecolectorDienteDragon();
+                                System.out.println("Construyendo recolector de diente de dragon");
+                                listaEdiD.agregarRecolectorDienteDragon();
                             }
                             else if(y == 4){
-                                listaEdi.agregarRecolectorVeneno();
+                                System.out.println("Construyendo recolector de veneno");
+                                listaEdiD.agregarRecolectorVeneno();
                             }
                             else if(y == 5){
-                                listaEdi.agregarFabricaNave();
+                                System.out.println("Construyendo fabrica de naves");
+                                listaEdiD.agregarFabricaNave();
                             }
                             else if(y == 6){
-                                listaEdi.agregarFabricaJuggernaut();
+                                System.out.println("Construyendo fabrica de juggernauts");
+                                listaEdiD.agregarFabricaJuggernaut();
                             }
                             break;
                         case 2:
@@ -253,11 +254,11 @@ public class Menu {
                             y = M.nextInt();
                             if(y == 1){
                                 System.out.println("Armando nave");
-                                listaVehi.agregarNave();
+                                listaVehiD.agregarNave();
                             }
                             else if(y == 2){
                                 System.out.println("Armando juggernaut");
-                                listaVehi.agregarJuggernaut();
+                                listaVehiD.agregarJuggernaut();
                             }
                             break;
                         case 4:
@@ -267,11 +268,11 @@ public class Menu {
                             y = M.nextInt();
                             if(y == 1){
                                 System.out.println("Entrenando escuadron dark");
-                                listaMili.agregarEscuadronDark();
+                                listaMiliD.agregarEscuadronDark();
                             }
                             else if(y == 2){
                                 System.out.println("Entrenando especialista dark");
-                                listaMili.agregarEspecialistaDark();
+                                listaMiliD.agregarEspecialistaDark();
                             }
                             break;
                         case 5:
@@ -313,18 +314,12 @@ public class Menu {
         int x = 0;
         int y = 0;
         Scanner M = new Scanner(System.in);
-//        AbstractFactory factoryE, factoryM, factoryRe,factoryVe;
-//        
-//        factoryE =  FactoryProducer.getFactory("edificacion");
-//        factoryM =  FactoryProducer.getFactory("milicia");
-//        factoryRe =  FactoryProducer.getFactory("recursos");
-//        factoryVe =  FactoryProducer.getFactory("vehiculo");
 
-        ListaMilicia listaMili = new ListaMilicia();
-        ListaVehiculos listaVehi = new ListaVehiculos();
-        ListaEdificaciones listaEdi = new ListaEdificaciones(); 
+        ListaMilicia listaMiliMu = new ListaMilicia();
+        ListaVehiculos listaVehiMu = new ListaVehiculos();
+        ListaEdificaciones listaEdiMu = new ListaEdificaciones(); 
         
-        listaEdi.agregarCentroMandoMuggle();
+        listaEdiMu.agregarCentroMandoMuggle();
         
         while (x != 8) {
             escoger();
@@ -343,22 +338,28 @@ public class Menu {
                         System.out.println("Deseo construir: ");
                         y = M.nextInt();
                         if(y == 1){
-                            listaEdi.agregarCuartelMuggle();
+                            System.out.println("Construyendo cuartel de muggles");
+                            listaEdiMu.agregarCuartelMuggle();
                         }
                         else if(y == 2){
-                            listaEdi.agregarRecolectorDinero();
+                            System.out.println("Construyendo recolector de dinero");
+                            listaEdiMu.agregarRecolectorDinero();
                         }
                         else if(y == 3){
-                            listaEdi.agregarRecolectorCredito();
+                            System.out.println("Construyendo recolector de credito");
+                            listaEdiMu.agregarRecolectorCredito();
                         }
                         else if(y == 4){
-                            listaEdi.agregarRecolectorCupon();
+                            System.out.println("Construyendo recolector de cupones");
+                            listaEdiMu.agregarRecolectorCupon();
                         }
                         else if(y == 5){
-                            listaEdi.agregarFabricaAvioneta();
+                            System.out.println("Construyendo fabrica de avionetas");
+                            listaEdiMu.agregarFabricaAvioneta();
                         }
                         else if(y == 6){
-                            listaEdi.agregarFabricaTanque();
+                            System.out.println("Construyendo fabrica de tanques");
+                            listaEdiMu.agregarFabricaTanque();
                         }
                         break;
                     case 2:
@@ -384,11 +385,11 @@ public class Menu {
                         y = M.nextInt();
                         if(y == 1){
                             System.out.println("Armando avioneta");
-                            listaVehi.agregarAvioneta();
+                            listaVehiMu.agregarAvioneta();
                         }
                         else if(y == 2){
                             System.out.println("Armando tanque");
-                            listaVehi.agregarTanque();
+                            listaVehiMu.agregarTanque();
                         }
                         break;
                     case 4:
@@ -398,11 +399,11 @@ public class Menu {
                         y = M.nextInt();
                         if(y == 1){
                             System.out.println("Entrenando escuadron muggle");
-                            listaMili.agregarEscuadronMuggle();
+                            listaMiliMu.agregarEscuadronMuggle();
                         }
                         else if(y == 2){
                             System.out.println("Entrenando especialista muggle");
-                            listaMili.agregarEspecialistaMuggle();
+                            listaMiliMu.agregarEspecialistaMuggle();
                         }
                         break;
                     case 5:

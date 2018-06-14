@@ -18,6 +18,15 @@ public class Jugador {
     private String nombre, nombreRaza;
     private int n;
     int raza;
+    
+    public void introduccion(){
+        System.out.println("En un planeta donde se combinan dos grandes historias: "
+                + "\nel maravilloso mundo de Harry Potter y una galaxia muy muy lejana de Star Wars"
+                + "\nExisten tres razas, y cada uno debera seleccionar una sola"
+                + "\nMago: Tienen rapida construccion, pero debil ataque."
+                + "\nDarkSider: Lenta contruccion, pero fuerte ataque."
+                + "\nMuggle: Rapidos recolectando, promedio en todo lo demas\n");
+    }
 
     public String getNombre() {
         return nombre;
@@ -34,15 +43,6 @@ public class Jugador {
     public void setNombreRaza(String nombreRaza) {
         this.nombreRaza = nombreRaza;
     }
-
-    public int getN() {
-        return n;
-    }
-
-    public void setN(int n) {
-        this.n = n;
-    }
-    
     
     public void CreadorJugador(){
         AbstractFactory factoryR;

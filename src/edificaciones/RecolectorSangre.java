@@ -11,9 +11,14 @@ package edificaciones;
  */
 public class RecolectorSangre implements Edificaciones{
     int vida = 1000;
+    String name = "Recolector Sangre";
+    
     @Override
     public void construir(){
         System.out.println("Construyendo recolector de recurso 1 de la raza DarkSider");
     }
-    
+    @Override
+    public String getName(){
+        return name;
+    }
 }

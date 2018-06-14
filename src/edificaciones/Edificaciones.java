@@ -11,4 +11,5 @@ package edificaciones;
  */
 public interface Edificaciones {
     public void construir();
+    public String getName();
 }

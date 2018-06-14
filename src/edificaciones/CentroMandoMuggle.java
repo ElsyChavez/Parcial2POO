@@ -11,9 +11,14 @@ package edificaciones;
  */
 public class CentroMandoMuggle implements Edificaciones{
     int vida = 10000;
+    String name = "Centro Mando Muggle";
     @Override
     public void construir(){
         System.out.println("Construyendo edificio mas importante de la raza DarkSider");
+    }
+    @Override
+    public String getName(){
+        return name;
     }
     
 }

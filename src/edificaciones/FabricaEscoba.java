@@ -11,9 +11,13 @@ package edificaciones;
  */
 public class FabricaEscoba implements Edificaciones{
     int vida = 1000;
+    String name = "Fabrica Escoba";
     @Override
     public void construir(){
         System.out.println("Construyendo fabrica de vehiculos 1, principal");
     }
-    
+    @Override
+    public String getName(){
+        return name;
+    }
 }

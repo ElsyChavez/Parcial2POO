@@ -25,5 +25,5 @@ public class EspecialistaDark implements Milicia{
     public void defender(){
         System.out.println("Especialista Dark defendiendo territorio");
     }
-    
+      
 }

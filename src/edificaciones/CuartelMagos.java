@@ -11,8 +11,14 @@ package edificaciones;
  */
 public class CuartelMagos implements Edificaciones{
     int vida = 1000;
+    String name = "Cuartel Magos";
+
     @Override
     public void construir(){
         System.out.println("Construyendo lugar de entrenamiento de tropas");
+    }
+    @Override
+    public String getName(){
+        return name;
     }
 }

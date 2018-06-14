@@ -11,9 +11,14 @@ package edificaciones;
  */
 public class CuartelDark implements Edificaciones{
     int vida = 1000;
+    String name = "Cuartel Dark";
     @Override
     public void construir(){
         System.out.println("Construyendo cuartel de la raza DarkSider");
+    }
+    @Override
+    public String getName(){
+        return name;
     }
     
 }

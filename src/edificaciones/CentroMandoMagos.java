@@ -11,9 +11,14 @@ package edificaciones;
  */
 public class CentroMandoMagos implements Edificaciones{
     int vida = 10000;
+    String name = "Centro Mando Magos";
     @Override
     public void construir(){
         System.out.println("Construyendo Edificio mas importante de la raza magos");
+    }
+    @Override
+    public String getName(){
+        return name;
     }
     
 }

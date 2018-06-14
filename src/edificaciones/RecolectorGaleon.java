@@ -13,8 +13,14 @@ import factory.AbstractFactory;
  */
 public class RecolectorGaleon implements Edificaciones{
     int vida = 1000;
+    String name = "Recolector Galeon";
+
     @Override
     public void construir(){
         System.out.println("Construyendo recolector 1, principal");
+    }
+    @Override
+    public String getName(){
+        return name;
     }
 }
