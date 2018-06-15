@@ -46,7 +46,7 @@ public class Menu {
     //Lista para el jugador que elija la raza muggle (humana)
     ListaMilicia listaMiliMu = new ListaMilicia();
     ListaVehiculos listaVehiMu = new ListaVehiculos();
-    ListaEdificaciones listaEdiMu = new ListaEdificaciones(); 
+    ListaEdificaciones listaEdiMu = new ListaEdificaciones();
     
     boolean seguir = true;
     Jugador jugador1 = new Jugador();
@@ -73,6 +73,15 @@ public class Menu {
                     break;
                 }
             }
+            if(jugador1.getNombreRaza().equals("muggle") || jugador2.getNombreRaza().equals("muggle")){
+                listaEdiMu.agregarCentroMandoMuggle();
+            }
+            if(jugador1.getNombreRaza().equals("mago") || jugador2.getNombreRaza().equals("mago")){
+                listaEdiM.agregarCentroMandoMago();
+            }
+            if(jugador1.getNombreRaza().equals("darksider") || jugador2.getNombreRaza().equals("darksider")){
+                listaEdiD.agregarCentroMandoDark();
+            }
         }
         else if(n == 2){
             System.out.println("***Bienvenido jugador 2***");
@@ -87,6 +96,15 @@ public class Menu {
                 else{
                     break;
                 }
+            }
+            if(jugador1.getNombreRaza().equals("muggle") || jugador2.getNombreRaza().equals("muggle")){
+                listaEdiMu.agregarCentroMandoMuggle();
+            }
+            if(jugador1.getNombreRaza().equals("mago") || jugador2.getNombreRaza().equals("mago")){
+                listaEdiM.agregarCentroMandoMago();
+            }
+            if(jugador1.getNombreRaza().equals("darksider") || jugador2.getNombreRaza().equals("darksider")){
+                listaEdiD.agregarCentroMandoDark();
             }
         }
     }
@@ -109,8 +127,6 @@ public class Menu {
         int x = 0;
         int y = 0;
         Scanner M = new Scanner(System.in);
-        
-        listaEdiM.agregarCentroMandoMago();
         
         while (x != 8) {
             escoger();
@@ -359,8 +375,6 @@ public class Menu {
             int y = 0;
             Scanner M = new Scanner(System.in);
 
-            listaEdiD.agregarCentroMandoDark();
-
             while (x != 8) {
                 escoger();
                 try {
@@ -566,7 +580,7 @@ public class Menu {
                             }
                             break;
                         case 5:
-                            System.out.println("Atacando");
+                            ataque();
                             break;
                         case 6:
                             System.out.println("Defendiendo");
@@ -607,8 +621,6 @@ public class Menu {
         int x = 0;
         int y = 0;
         Scanner M = new Scanner(System.in);
-        
-        listaEdiMu.agregarCentroMandoMuggle();
         
         while (x != 8) {
             escoger();
@@ -815,7 +827,7 @@ public class Menu {
                         }
                         break;
                     case 5:
-                        System.out.println("Atacando");
+                        ataque();
                         break;
                     case 6:
                         System.out.println("Defendiendo");
@@ -853,35 +865,43 @@ public class Menu {
     }
     
     int cont = 1;
+    int t;
     
     public void menuPrincipal(){
         random();
         
         while(seguir){
             if(n == 1){
+
                 System.out.println("**********Fase "+cont+"**********");
                 if(jugador1.getNombreRaza().equals("mago")){
                     System.out.println("***Menu del jugador " + jugador1.getNombre() + "***");
+                    t = 1;
                     menu();
                 }
                 else if(jugador1.getNombreRaza().equals("darksider")){
                     System.out.println("***Menu del jugador " + jugador1.getNombre() + "***");
+                    t=1;
                     menud();
                 }
                 else if(jugador1.getNombreRaza().equals("muggle")){
                     System.out.println("***Menu del jugador " + jugador1.getNombre() + "***");
+                    t=1;
                     menum();
                 }
                 if(jugador2.getNombreRaza().equals("mago")){
                     System.out.println("***Menu del jugador " + jugador2.getNombre() + "***");
+                    t=2;
                     menu();
                 }
                 else if(jugador2.getNombreRaza().equals("darksider")){
                     System.out.println("***Menu del jugador " + jugador2.getNombre() + "***");
+                    t=2;
                     menud();
                 }
                 else if(jugador2.getNombreRaza().equals("muggle")){
                     System.out.println("***Menu del jugador " + jugador2.getNombre() + "***");
+                    t=2;
                     menum();
                 }
             } 
@@ -889,26 +909,32 @@ public class Menu {
                 System.out.println("**********Fase "+cont+"**********");
                 if(jugador2.getNombreRaza().equals("mago")){
                     System.out.println("***Menu del jugador " + jugador2.getNombre() + "***");
+                    t=1;
                     menu();
                 }
                 else if(jugador2.getNombreRaza().equals("darksider")){
                     System.out.println("***Menu del jugador " + jugador2.getNombre() + "***");
+                    t=1;
                     menud();
                 }
                 else if(jugador2.getNombreRaza().equals("muggle")){
                     System.out.println("***Menu del jugador " + jugador2.getNombre() + "***");
+                    t=1;
                     menum();
                 }
                 if(jugador1.getNombreRaza().equals("mago")){
                     System.out.println("***Menu del jugador " + jugador1.getNombre() + "***");
+                    t=2;
                     menu();
                 }
                 else if(jugador1.getNombreRaza().equals("darksider")){
                     System.out.println("***Menu del jugador " + jugador1.getNombre() + "***");
+                    t=2;
                     menud();
                 }
                 else if(jugador1.getNombreRaza().equals("muggle")){
                     System.out.println("***Menu del jugador " + jugador1.getNombre() + "***");
+                    t=2;
                     menum();
                 }
             }
@@ -917,345 +943,681 @@ public class Menu {
         
       }
         
-        public void ataque(){
+    public void ataque(){
             
-            if(jugador1.getNombreRaza().equals("mago") && jugador2.getNombreRaza().equals("darksider") && n==1){
+            if(jugador1.getNombreRaza().equals("mago") && n==1 && t==1){
                 int edificiosTotal = listaEdiD.contarTodasEdificaciones();
+                int edificiosTotal1 = listaEdiMu.contarTodasEdificaciones();
                 int miliciaTotal = listaMiliM.contarTodaMilicia();
                 int k,r;
                 int vida, danio;
                 
-                if(listaMiliM.verificarMiembros("Escuadron Mago") || listaMiliM.verificarMiembros("Especialista Mago")){
-                    listaMiliM.mostrarMiliciaEnemigo();
-                    System.out.println("Escriba con que tropa desea atacar al enemigo: ");
-                    k = read.nextInt();
-                    Milicia miliM = listaMiliM.getMilicias(k);
+                if(jugador2.getNombreRaza().equals("darksider")){
+                    if(listaMiliM.verificarMiembros("Escuadron Mago") || listaMiliM.verificarMiembros("Especialista Mago")){
+                        listaMiliM.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliM.getMilicias(k);
 
-                    if(k>0 && k<=miliciaTotal){
-                        listaEdiD.mostrarEdificioEnemigo();
-                        System.out.println("Escriba el numero del edificio que desea atacar: ");
-                        r=read.nextInt();
-                        Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
-                        if(r>0 && r<=edificiosTotal){
-                            vida =  edifD2.getVida() - miliM.getDanio();
-                            edifD2.actualizarVida(vida);
-                        }
-                        else{
-                            System.out.println("Ingrese un valor valido la proxima vez.");
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiD.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
                         }
                     }
+                    else{System.out.println("No hay tropas de mago entrenadas aun");}
                 }
+                else if(jugador2.getNombreRaza().equals("muggle")){
+                    if(listaMiliM.verificarMiembros("Escuadron Mago") || listaMiliM.verificarMiembros("Especialista Mago")){
+                        listaMiliM.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliM.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiMu.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal1){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas de mago entrenadas aun.");}
+                }
+               
             }
             
-            else if(jugador1.getNombreRaza().equals("mago") && jugador2.getNombreRaza().equals("muggle") && n==1){
-                int edificiosTotal = listaEdiMu.contarTodasEdificaciones();
+            else if(jugador2.getNombreRaza().equals("darksider") && n==1 && t==2){
+                int edificiosTotal = listaEdiM.contarTodasEdificaciones();
+                int edificiosTotal1 = listaEdiMu.contarTodasEdificaciones();
+                int miliciaTotal = listaMiliD.contarTodaMilicia();
+                int k,r;
+                int vida, danio;
+                
+                if(jugador1.getNombreRaza().equals("mago")){
+                    if(listaMiliD.verificarMiembros("Escuadron Dark") || listaMiliD.verificarMiembros("Especialista Dark")){
+                        listaMiliD.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliD.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiM.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas dark entrenadas aun");}
+                }
+                else if(jugador1.getNombreRaza().equals("muggle")){
+                    if(listaMiliD.verificarMiembros("Escuadron Dark") || listaMiliD.verificarMiembros("Especialista Dark")){
+                        listaMiliD.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliD.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiMu.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal1){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas dark entrenadas aun.");}
+                }
+               
+            }
+            
+            else if(jugador1.getNombreRaza().equals("darksider") && n==1 && t==1){
+                int edificiosTotal = listaEdiM.contarTodasEdificaciones();
+                int edificiosTotal1 = listaEdiMu.contarTodasEdificaciones();
+                int miliciaTotal = listaMiliD.contarTodaMilicia();
+                int k,r;
+                int vida, danio;
+                
+                if(jugador2.getNombreRaza().equals("mago")){
+                    if(listaMiliD.verificarMiembros("Escuadron Dark") || listaMiliD.verificarMiembros("Especialista Dark")){
+                        listaMiliD.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliD.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiM.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas dark entrenadas aun");}
+                }
+                else if(jugador2.getNombreRaza().equals("muggle")){
+                    if(listaMiliD.verificarMiembros("Escuadron Dark") || listaMiliD.verificarMiembros("Especialista Dark")){
+                        listaMiliD.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliD.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiMu.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal1){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas dark entrenadas aun.");}
+                }
+               
+            }
+            
+            else if(jugador2.getNombreRaza().equals("mago") && n==1 && t==2){
+                int edificiosTotal = listaEdiD.contarTodasEdificaciones();
+                int edificiosTotal1 = listaEdiMu.contarTodasEdificaciones();
                 int miliciaTotal = listaMiliM.contarTodaMilicia();
                 int k,r;
                 int vida, danio;
                 
-                if(listaMiliM.verificarMiembros("Escuadron Mago") || listaMiliM.verificarMiembros("Especialista Mago")){
-                    listaMiliM.mostrarMiliciaEnemigo();
-                    System.out.println("Escriba con que tropa desea atacar al enemigo: ");
-                    k = read.nextInt();
-                    Milicia miliM = listaMiliM.getMilicias(k);
+                if(jugador1.getNombreRaza().equals("darksider")){
+                    if(listaMiliM.verificarMiembros("Escuadron Mago") || listaMiliM.verificarMiembros("Especialista Mago")){
+                        listaMiliM.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliM.getMilicias(k);
 
-                    if(k>0 && k<=miliciaTotal){
-                        listaEdiMu.mostrarEdificioEnemigo();
-                        System.out.println("Escriba el numero del edificio que desea atacar: ");
-                        r=read.nextInt();
-                        Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
-                        if(r>0 && r<=edificiosTotal){
-                            vida =  edifD2.getVida() - miliM.getDanio();
-                            edifD2.actualizarVida(vida);
-                        }
-                        else{
-                            System.out.println("Ingrese un valor valido la proxima vez.");
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiD.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
                         }
                     }
+                    else{System.out.println("No hay tropas de mago entrenadas aun");}
                 }
+                else if(jugador1.getNombreRaza().equals("muggle")){
+                    if(listaMiliM.verificarMiembros("Escuadron Mago") || listaMiliM.verificarMiembros("Especialista Mago")){
+                        listaMiliM.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliM.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiMu.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal1){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas de mago entrenadas aun.");}
+                }
+               
             }
             
-            else if(jugador1.getNombreRaza().equals("darksider") && jugador2.getNombreRaza().equals("mago") && n==1){
+            else if(jugador1.getNombreRaza().equals("muggle") && n==1 && t==1){
                 int edificiosTotal = listaEdiM.contarTodasEdificaciones();
-                int miliciaTotal = listaMiliD.contarTodaMilicia();
-                int k,r;
-                int vida, danio;
-                
-                if(listaMiliD.verificarMiembros("Escuadron Dark") || listaMiliD.verificarMiembros("Especialista Dark")){
-                    listaMiliD.mostrarMiliciaEnemigo();
-                    System.out.println("Escriba con que tropa desea atacar al enemigo: ");
-                    k = read.nextInt();
-                    Milicia miliM = listaMiliD.getMilicias(k);
-
-                    if(k>0 && k<=miliciaTotal){
-                        listaEdiM.mostrarEdificioEnemigo();
-                        System.out.println("Escriba el numero del edificio que desea atacar: ");
-                        r=read.nextInt();
-                        Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
-                        if(r>0 && r<=edificiosTotal){
-                            vida =  edifD2.getVida() - miliM.getDanio();
-                            edifD2.actualizarVida(vida);
-                        }
-                        else{
-                            System.out.println("Ingrese un valor valido la proxima vez.");
-                        }
-                    }
-                }
-            }
-            
-            else if(jugador1.getNombreRaza().equals("darksider") && jugador2.getNombreRaza().equals("muggle") && n==1){
-                int edificiosTotal = listaEdiMu.contarTodasEdificaciones();
-                int miliciaTotal = listaMiliD.contarTodaMilicia();
-                int k,r;
-                int vida, danio;
-                
-                if(listaMiliD.verificarMiembros("Escuadron Dark") || listaMiliD.verificarMiembros("Especialista Dark")){
-                    listaMiliD.mostrarMiliciaEnemigo();
-                    System.out.println("Escriba con que tropa desea atacar al enemigo: ");
-                    k = read.nextInt();
-                    Milicia miliM = listaMiliD.getMilicias(k);
-
-                    if(k>0 && k<=miliciaTotal){
-                        listaEdiMu.mostrarEdificioEnemigo();
-                        System.out.println("Escriba el numero del edificio que desea atacar: ");
-                        r=read.nextInt();
-                        Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
-                        if(r>0 && r<=edificiosTotal){
-                            vida =  edifD2.getVida() - miliM.getDanio();
-                            edifD2.actualizarVida(vida);
-                        }
-                        else{
-                            System.out.println("Ingrese un valor valido la proxima vez.");
-                        }
-                    }
-                }
-            }
-            
-            else if(jugador1.getNombreRaza().equals("muggle") && jugador2.getNombreRaza().equals("mago") && n==1){
-                int edificiosTotal = listaEdiM.contarTodasEdificaciones();
+                int edificiosTotal1 = listaEdiD.contarTodasEdificaciones();
                 int miliciaTotal = listaMiliMu.contarTodaMilicia();
                 int k,r;
                 int vida, danio;
                 
-                if(listaMiliMu.verificarMiembros("Escuadron Dark") || listaMiliMu.verificarMiembros("Especialista Dark")){
-                    listaMiliMu.mostrarMiliciaEnemigo();
-                    System.out.println("Escriba con que tropa desea atacar al enemigo: ");
-                    k = read.nextInt();
-                    Milicia miliM = listaMiliMu.getMilicias(k);
+                if(jugador2.getNombreRaza().equals("mago")){
+                    if(listaMiliMu.verificarMiembros("Escuadron Muggle") || listaMiliMu.verificarMiembros("Especialista Muggle")){
+                        listaMiliMu.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliMu.getMilicias(k);
 
-                    if(k>0 && k<=miliciaTotal){
-                        listaEdiM.mostrarEdificioEnemigo();
-                        System.out.println("Escriba el numero del edificio que desea atacar: ");
-                        r=read.nextInt();
-                        Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
-                        if(r>0 && r<=edificiosTotal){
-                            vida =  edifD2.getVida() - miliM.getDanio();
-                            edifD2.actualizarVida(vida);
-                        }
-                        else{
-                            System.out.println("Ingrese un valor valido la proxima vez.");
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiM.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
                         }
                     }
+                    else{System.out.println("No hay tropas de muggle entrenadas aun");}
                 }
+                else if(jugador2.getNombreRaza().equals("darksider")){
+                    if(listaMiliMu.verificarMiembros("Escuadron Muggle") || listaMiliMu.verificarMiembros("Especialista Muggle")){
+                        listaMiliMu.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliMu.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiD.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal1){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas de muggle entrenadas aun.");}
+                }
+               
             }
             
-            else if(jugador1.getNombreRaza().equals("muggle") && jugador2.getNombreRaza().equals("dark") && n==1){
-                int edificiosTotal = listaEdiD.contarTodasEdificaciones();
+            else if(jugador2.getNombreRaza().equals("muggle") && n==1 && t==2){
+                int edificiosTotal = listaEdiM.contarTodasEdificaciones();
+                int edificiosTotal1 = listaEdiD.contarTodasEdificaciones();
                 int miliciaTotal = listaMiliMu.contarTodaMilicia();
                 int k,r;
                 int vida, danio;
                 
-                if(listaMiliMu.verificarMiembros("Escuadron Dark") || listaMiliMu.verificarMiembros("Especialista Dark")){
-                    listaMiliMu.mostrarMiliciaEnemigo();
-                    System.out.println("Escriba con que tropa desea atacar al enemigo: ");
-                    k = read.nextInt();
-                    Milicia miliM = listaMiliMu.getMilicias(k);
+                if(jugador1.getNombreRaza().equals("mago")){
+                    if(listaMiliMu.verificarMiembros("Escuadron Muggle") || listaMiliMu.verificarMiembros("Especialista Muggle")){
+                        listaMiliMu.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliMu.getMilicias(k);
 
-                    if(k>0 && k<=miliciaTotal){
-                        listaEdiD.mostrarEdificioEnemigo();
-                        System.out.println("Escriba el numero del edificio que desea atacar: ");
-                        r=read.nextInt();
-                        Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
-                        if(r>0 && r<=edificiosTotal){
-                            vida =  edifD2.getVida() - miliM.getDanio();
-                            edifD2.actualizarVida(vida);
-                        }
-                        else{
-                            System.out.println("Ingrese un valor valido la proxima vez.");
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiM.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
                         }
                     }
+                    else{System.out.println("No hay tropas de muggle entrenadas aun");}
                 }
-            }
-            
-            else if(jugador1.getNombreRaza().equals("mago") && jugador2.getNombreRaza().equals("darksider") && n==2){
+                else if(jugador1.getNombreRaza().equals("darksider")){
+                    if(listaMiliMu.verificarMiembros("Escuadron Muggle") || listaMiliMu.verificarMiembros("Especialista Muggle")){
+                        listaMiliMu.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliMu.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiD.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal1){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas de muggle entrenadas aun.");}
+                }
+               
+            }   
+
+            else if(jugador1.getNombreRaza().equals("mago") && n==2 && t==2){
                 int edificiosTotal = listaEdiD.contarTodasEdificaciones();
+                int edificiosTotal1 = listaEdiMu.contarTodasEdificaciones();
                 int miliciaTotal = listaMiliM.contarTodaMilicia();
                 int k,r;
                 int vida, danio;
                 
-                if(listaMiliM.verificarMiembros("Escuadron Mago") || listaMiliM.verificarMiembros("Especialista Mago")){
-                    listaMiliM.mostrarMiliciaEnemigo();
-                    System.out.println("Escriba con que tropa desea atacar al enemigo: ");
-                    k = read.nextInt();
-                    Milicia miliM = listaMiliM.getMilicias(k);
+                if(jugador2.getNombreRaza().equals("darksider")){
+                    if(listaMiliM.verificarMiembros("Escuadron Mago") || listaMiliM.verificarMiembros("Especialista Mago")){
+                        listaMiliM.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliM.getMilicias(k);
 
-                    if(k>0 && k<=miliciaTotal){
-                        listaEdiD.mostrarEdificioEnemigo();
-                        System.out.println("Escriba el numero del edificio que desea atacar: ");
-                        r=read.nextInt();
-                        Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
-                        if(r>0 && r<=edificiosTotal){
-                            vida =  edifD2.getVida() - miliM.getDanio();
-                            edifD2.actualizarVida(vida);
-                        }
-                        else{
-                            System.out.println("Ingrese un valor valido la proxima vez.");
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiD.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
                         }
                     }
+                    else{System.out.println("No hay tropas de mago entrenadas aun");}
                 }
+                else if(jugador2.getNombreRaza().equals("muggle")){
+                    if(listaMiliM.verificarMiembros("Escuadron Mago") || listaMiliM.verificarMiembros("Especialista Mago")){
+                        listaMiliM.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliM.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiMu.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal1){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas de mago entrenadas aun.");}
+                }
+               
             }
             
-            else if(jugador1.getNombreRaza().equals("mago") && jugador2.getNombreRaza().equals("muggle") && n==2){
-                int edificiosTotal = listaEdiMu.contarTodasEdificaciones();
+            else if(jugador2.getNombreRaza().equals("darksider") && n==2 && t==1){
+                int edificiosTotal = listaEdiM.contarTodasEdificaciones();
+                int edificiosTotal1 = listaEdiMu.contarTodasEdificaciones();
+                int miliciaTotal = listaMiliD.contarTodaMilicia();
+                int k,r;
+                int vida, danio;
+                
+                if(jugador1.getNombreRaza().equals("mago")){
+                    if(listaMiliD.verificarMiembros("Escuadron Dark") || listaMiliD.verificarMiembros("Especialista Dark")){
+                        listaMiliD.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliD.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiM.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas dark entrenadas aun");}
+                }
+                else if(jugador1.getNombreRaza().equals("muggle")){
+                    if(listaMiliD.verificarMiembros("Escuadron Dark") || listaMiliD.verificarMiembros("Especialista Dark")){
+                        listaMiliD.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliD.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiMu.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal1){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas dark entrenadas aun.");}
+                }
+               
+            }
+            
+            else if(jugador1.getNombreRaza().equals("darksider") && n==2 && t==2){
+                int edificiosTotal = listaEdiM.contarTodasEdificaciones();
+                int edificiosTotal1 = listaEdiMu.contarTodasEdificaciones();
+                int miliciaTotal = listaMiliD.contarTodaMilicia();
+                int k,r;
+                int vida, danio;
+                
+                if(jugador2.getNombreRaza().equals("mago")){
+                    if(listaMiliD.verificarMiembros("Escuadron Dark") || listaMiliD.verificarMiembros("Especialista Dark")){
+                        listaMiliD.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliD.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiM.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas dark entrenadas aun");}
+                }
+                else if(jugador2.getNombreRaza().equals("muggle")){
+                    if(listaMiliD.verificarMiembros("Escuadron Dark") || listaMiliD.verificarMiembros("Especialista Dark")){
+                        listaMiliD.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliD.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiMu.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal1){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas dark entrenadas aun.");}
+                }
+               
+            }
+            
+            else if(jugador2.getNombreRaza().equals("mago") && n==2 && t==1){
+                int edificiosTotal = listaEdiD.contarTodasEdificaciones();
+                int edificiosTotal1 = listaEdiMu.contarTodasEdificaciones();
                 int miliciaTotal = listaMiliM.contarTodaMilicia();
                 int k,r;
                 int vida, danio;
                 
-                if(listaMiliM.verificarMiembros("Escuadron Mago") || listaMiliM.verificarMiembros("Especialista Mago")){
-                    listaMiliM.mostrarMiliciaEnemigo();
-                    System.out.println("Escriba con que tropa desea atacar al enemigo: ");
-                    k = read.nextInt();
-                    Milicia miliM = listaMiliM.getMilicias(k);
+                if(jugador1.getNombreRaza().equals("darksider")){
+                    if(listaMiliM.verificarMiembros("Escuadron Mago") || listaMiliM.verificarMiembros("Especialista Mago")){
+                        listaMiliM.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliM.getMilicias(k);
 
-                    if(k>0 && k<=miliciaTotal){
-                        listaEdiMu.mostrarEdificioEnemigo();
-                        System.out.println("Escriba el numero del edificio que desea atacar: ");
-                        r=read.nextInt();
-                        Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
-                        if(r>0 && r<=edificiosTotal){
-                            vida =  edifD2.getVida() - miliM.getDanio();
-                            edifD2.actualizarVida(vida);
-                        }
-                        else{
-                            System.out.println("Ingrese un valor valido la proxima vez.");
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiD.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
                         }
                     }
+                    else{System.out.println("No hay tropas de mago entrenadas aun");}
                 }
+                else if(jugador1.getNombreRaza().equals("muggle")){
+                    if(listaMiliM.verificarMiembros("Escuadron Mago") || listaMiliM.verificarMiembros("Especialista Mago")){
+                        listaMiliM.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliM.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiMu.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal1){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas de mago entrenadas aun.");}
+                }
+               
             }
             
-            else if(jugador1.getNombreRaza().equals("darksider") && jugador2.getNombreRaza().equals("mago") && n==2){
+            else if(jugador1.getNombreRaza().equals("muggle") && n==2 && t==2){
                 int edificiosTotal = listaEdiM.contarTodasEdificaciones();
-                int miliciaTotal = listaMiliD.contarTodaMilicia();
-                int k,r;
-                int vida, danio;
-                
-                if(listaMiliD.verificarMiembros("Escuadron Dark") || listaMiliD.verificarMiembros("Especialista Dark")){
-                    listaMiliD.mostrarMiliciaEnemigo();
-                    System.out.println("Escriba con que tropa desea atacar al enemigo: ");
-                    k = read.nextInt();
-                    Milicia miliM = listaMiliD.getMilicias(k);
-
-                    if(k>0 && k<=miliciaTotal){
-                        listaEdiM.mostrarEdificioEnemigo();
-                        System.out.println("Escriba el numero del edificio que desea atacar: ");
-                        r=read.nextInt();
-                        Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
-                        if(r>0 && r<=edificiosTotal){
-                            vida =  edifD2.getVida() - miliM.getDanio();
-                            edifD2.actualizarVida(vida);
-                        }
-                        else{
-                            System.out.println("Ingrese un valor valido la proxima vez.");
-                        }
-                    }
-                }
-            }
-            
-            else if(jugador1.getNombreRaza().equals("darksider") && jugador2.getNombreRaza().equals("muggle") && n==2){
-                int edificiosTotal = listaEdiMu.contarTodasEdificaciones();
-                int miliciaTotal = listaMiliD.contarTodaMilicia();
-                int k,r;
-                int vida, danio;
-                
-                if(listaMiliD.verificarMiembros("Escuadron Dark") || listaMiliD.verificarMiembros("Especialista Dark")){
-                    listaMiliD.mostrarMiliciaEnemigo();
-                    System.out.println("Escriba con que tropa desea atacar al enemigo: ");
-                    k = read.nextInt();
-                    Milicia miliM = listaMiliD.getMilicias(k);
-
-                    if(k>0 && k<=miliciaTotal){
-                        listaEdiMu.mostrarEdificioEnemigo();
-                        System.out.println("Escriba el numero del edificio que desea atacar: ");
-                        r=read.nextInt();
-                        Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
-                        if(r>0 && r<=edificiosTotal){
-                            vida =  edifD2.getVida() - miliM.getDanio();
-                            edifD2.actualizarVida(vida);
-                        }
-                        else{
-                            System.out.println("Ingrese un valor valido la proxima vez.");
-                        }
-                    }
-                }
-            }
-            
-            else if(jugador1.getNombreRaza().equals("muggle") && jugador2.getNombreRaza().equals("mago") && n==2){
-                int edificiosTotal = listaEdiM.contarTodasEdificaciones();
+                int edificiosTotal1 = listaEdiD.contarTodasEdificaciones();
                 int miliciaTotal = listaMiliMu.contarTodaMilicia();
                 int k,r;
                 int vida, danio;
                 
-                if(listaMiliMu.verificarMiembros("Escuadron Dark") || listaMiliMu.verificarMiembros("Especialista Dark")){
-                    listaMiliMu.mostrarMiliciaEnemigo();
-                    System.out.println("Escriba con que tropa desea atacar al enemigo: ");
-                    k = read.nextInt();
-                    Milicia miliM = listaMiliMu.getMilicias(k);
+                if(jugador2.getNombreRaza().equals("mago")){
+                    if(listaMiliMu.verificarMiembros("Escuadron Muggle") || listaMiliMu.verificarMiembros("Especialista Muggle")){
+                        listaMiliMu.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliMu.getMilicias(k);
 
-                    if(k>0 && k<=miliciaTotal){
-                        listaEdiM.mostrarEdificioEnemigo();
-                        System.out.println("Escriba el numero del edificio que desea atacar: ");
-                        r=read.nextInt();
-                        Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
-                        if(r>0 && r<=edificiosTotal){
-                            vida =  edifD2.getVida() - miliM.getDanio();
-                            edifD2.actualizarVida(vida);
-                        }
-                        else{
-                            System.out.println("Ingrese un valor valido la proxima vez.");
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiM.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
                         }
                     }
+                    else{System.out.println("No hay tropas de muggle entrenadas aun");}
                 }
+                else if(jugador2.getNombreRaza().equals("darksider")){
+                    if(listaMiliMu.verificarMiembros("Escuadron Muggle") || listaMiliMu.verificarMiembros("Especialista Muggle")){
+                        listaMiliMu.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliMu.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiD.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal1){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas de muggle entrenadas aun.");}
+                }
+               
             }
             
-            else if(jugador1.getNombreRaza().equals("muggle") && jugador2.getNombreRaza().equals("dark") && n==2){
-                int edificiosTotal = listaEdiD.contarTodasEdificaciones();
+            else if(jugador2.getNombreRaza().equals("muggle") && n==2 && t==1){
+                int edificiosTotal = listaEdiM.contarTodasEdificaciones();
+                int edificiosTotal1 = listaEdiD.contarTodasEdificaciones();
                 int miliciaTotal = listaMiliMu.contarTodaMilicia();
                 int k,r;
                 int vida, danio;
                 
-                if(listaMiliMu.verificarMiembros("Escuadron Dark") || listaMiliMu.verificarMiembros("Especialista Dark")){
-                    listaMiliMu.mostrarMiliciaEnemigo();
-                    System.out.println("Escriba con que tropa desea atacar al enemigo: ");
-                    k = read.nextInt();
-                    Milicia miliM = listaMiliMu.getMilicias(k);
+                if(jugador1.getNombreRaza().equals("mago")){
+                    if(listaMiliMu.verificarMiembros("Escuadron Muggle") || listaMiliMu.verificarMiembros("Especialista Muggle")){
+                        listaMiliMu.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliMu.getMilicias(k);
 
-                    if(k>0 && k<=miliciaTotal){
-                        listaEdiD.mostrarEdificioEnemigo();
-                        System.out.println("Escriba el numero del edificio que desea atacar: ");
-                        r=read.nextInt();
-                        Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
-                        if(r>0 && r<=edificiosTotal){
-                            vida =  edifD2.getVida() - miliM.getDanio();
-                            edifD2.actualizarVida(vida);
-                        }
-                        else{
-                            System.out.println("Ingrese un valor valido la proxima vez.");
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiM.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
                         }
                     }
+                    else{System.out.println("No hay tropas de muggle entrenadas aun");}
                 }
-            }
-           
+                else if(jugador1.getNombreRaza().equals("darksider")){
+                    if(listaMiliMu.verificarMiembros("Escuadron Muggle") || listaMiliMu.verificarMiembros("Especialista Muggle")){
+                        listaMiliMu.mostrarMiliciaEnemigo();
+                        System.out.println("Escriba con que tropa desea atacar al enemigo: ");
+                        k = read.nextInt();
+                        Milicia miliM = listaMiliMu.getMilicias(k);
+
+                        if(k>0 && k<=miliciaTotal){
+                            listaEdiD.mostrarEdificioEnemigo();
+                            System.out.println("Escriba el numero del edificio que desea atacar: ");
+                            r=read.nextInt();
+                            Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
+                            if(r>0 && r<=edificiosTotal1){
+                                vida =  edifD2.getVida() - miliM.getDanio();
+                                edifD2.actualizarVida(vida);
+                            }
+                            else{
+                                System.out.println("Ingrese un valor valido la proxima vez.");
+                            }
+                        }
+                    }
+                    else{System.out.println("No hay tropas de muggle entrenadas aun.");}
+                }
+               
+            }   
         }
-    }
+}
+    
 
 
