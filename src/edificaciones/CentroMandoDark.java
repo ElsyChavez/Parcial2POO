@@ -10,7 +10,7 @@ package edificaciones;
  * @author Ivis Chavez
  */
 public class CentroMandoDark implements Edificaciones{
-    int vida = 100;
+    int vida = 10000;
     String name = "Centro Mando Dark";
     int sangre = 800, dientedragon = 1000, veneno = 600;
    

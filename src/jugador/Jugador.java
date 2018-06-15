@@ -23,8 +23,8 @@ public class Jugador {
         System.out.println("En un planeta donde se combinan dos grandes historias: "
                 + "\nel maravilloso mundo de Harry Potter y una galaxia muy muy lejana de Star Wars"
                 + "\nExisten tres razas, y cada uno debera seleccionar una sola"
-                + "\nMago: Tienen rapida construccion, pero debil ataque."
-                + "\nDarkSider: Lenta contruccion, pero fuerte ataque."
+                + "\nMago: Debil ataque, recoleccion promedio."
+                + "\nDarkSider: Fuerte ataque, baja recoleccion."
                 + "\nMuggle: Rapidos recolectando, promedio en todo lo demas\n");
     }
 

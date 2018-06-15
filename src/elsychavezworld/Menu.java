@@ -33,6 +33,7 @@ public class Menu {
         return menu;
     }
     
+    
     //Lista para el jugador que elija la raza mago
     ListaMilicia listaMiliM = new ListaMilicia();
     ListaVehiculos listaVehiM = new ListaVehiculos();
@@ -52,11 +53,14 @@ public class Menu {
     Jugador jugador1 = new Jugador();
     Jugador jugador2 = new Jugador();
     
+    
     int n;
+    int fase;
     
     Scanner read = new Scanner(System.in);
     
     public void random(){
+        jugador1.introduccion();
         Random rand = new Random();
         n = rand.nextInt(2) + 1;
         if(n == 1){
@@ -229,20 +233,7 @@ public class Menu {
                         }
                         break;
                     case 2:
-                        System.out.println("1. Recolectar galeones");
-                        System.out.println("2. Recolectar sickles");
-                        System.out.println("3. Recolectar knuts");
-                        System.out.println("Deseo recolectar: ");
-                        y = M.nextInt();
-                        if(y == 1){
-                            System.out.println("Recolectando Galeones");;
-                        }
-                        else if(y == 2){
-                            System.out.println("Recolectando Sickles");
-                        }
-                        else if(y == 3){
-                            System.out.println("Recolectando Knuts");;
-                        }
+                        recolectarMa();
                         break;
                     case 3:
                         System.out.println("1. Armar escoba. Costo: Galeones(200),Knuts(400)");
@@ -476,20 +467,7 @@ public class Menu {
                             }
                             break;
                         case 2:
-                            System.out.println("1. Recolectar sangre");
-                            System.out.println("2. Recolectar diente de dragon");
-                            System.out.println("3. Recolectar veneno");
-                            System.out.println("Deseo recolectar: ");
-                            y = M.nextInt();
-                            if(y == 1){
-                                System.out.println("Recolectando sangre");;
-                            }
-                            else if(y == 2){
-                                System.out.println("Recolectando diente de dragon");
-                            }
-                            else if(y == 3){
-                                System.out.println("Recolectando veneno");;
-                            }
+                            recolectarDa();
                             break;
                         case 3:
                             System.out.println("1. Armar nave. Costo: Sangre(200), Veneno(400)");
@@ -723,21 +701,8 @@ public class Menu {
                         }
                         break;
                     case 2:
-                        System.out.println("1. Recolectar dinero");
-                        System.out.println("2. Recolectar credito");
-                        System.out.println("3. Recolectar cupones");
-                        System.out.println("Deseo recolectar: ");
-                        y = M.nextInt();
-                        if(y == 1){
-                            System.out.println("Recolectando dinero");;
-                        }
-                        else if(y == 2){
-                            System.out.println("Recolectando credito");
-                        }
-                        else if(y == 3){
-                            System.out.println("Recolectando cupones");
-                        }
-                        break;
+                          recolectarMu();
+                          break;
                     case 3:
                         System.out.println("1. Armar avioneta. Costo: Dinero(200), Cupones(400)");
                         System.out.println("2. Armar tanque. Costo: Dinero(400), Credito(100)");
@@ -866,6 +831,117 @@ public class Menu {
     
     int cont = 1;
     int t;
+    
+    public void recolectarDa(){
+        Edificaciones recur = listaEdiD.getRecursos();
+        int recu1, recu2, recu3, vida;
+        if(listaEdiM.contarTodasEdificaciones()>0){
+            if(listaEdiM.verificarEdificacion("Recolector Sangre")){
+                recu1 = recur.getRecurso1()+600;
+                recu2 = recur.getRecurso2();
+                recu3 = recur.getRecurso3();
+                vida = recur.getVida();
+                recur.actualizarRecursos(recu1, recu2, recu3, vida);
+            }
+            else{
+                System.out.println("No se puede recolectar todavia");
+            }
+            if(listaEdiM.verificarEdificacion("Recolector Diente Dragon")){
+                recu1 = recur.getRecurso1();
+                recu2 = recur.getRecurso2()+600;
+                recu3 = recur.getRecurso3();
+                vida = recur.getVida();
+                recur.actualizarRecursos(recu1, recu2, recu3, vida);
+            }
+            else{
+                System.out.println("No se puede recolectar todavia");
+            }
+            if(listaEdiM.verificarEdificacion("Recolector Sangre")){
+                recu1 = recur.getRecurso1();
+                recu2 = recur.getRecurso2();
+                recu3 = recur.getRecurso3()+600;
+                vida = recur.getVida();
+                recur.actualizarRecursos(recu1, recu2, recu3, vida);
+            }
+            else{
+                System.out.println("No se puede recolectar todavia");
+            }
+        }
+    }
+    
+    public void recolectarMa(){
+        Edificaciones recur = listaEdiM.getRecursos();
+        int recu1, recu2, recu3, vida;
+        if(listaEdiM.contarTodasEdificaciones()>0){
+            if(listaEdiM.verificarEdificacion("Recolector Galeon")){
+                recu1 = recur.getRecurso1()+1000;
+                recu2 = recur.getRecurso2();
+                recu3 = recur.getRecurso3();
+                vida = recur.getVida();
+                recur.actualizarRecursos(recu1, recu2, recu3, vida);
+            }
+            else{
+                System.out.println("No se puede recolectar todavia");
+            }
+            if(listaEdiM.verificarEdificacion("Recolector Sickle")){
+                recu1 = recur.getRecurso1();
+                recu2 = recur.getRecurso2()+1000;
+                recu3 = recur.getRecurso3();
+                vida = recur.getVida();
+                recur.actualizarRecursos(recu1, recu2, recu3, vida);
+            }
+            else{
+                System.out.println("No se puede recolectar todavia");
+            }
+            if(listaEdiM.verificarEdificacion("Recolector Knut")){
+                recu1 = recur.getRecurso1();
+                recu2 = recur.getRecurso2();
+                recu3 = recur.getRecurso3()+1000;
+                vida = recur.getVida();
+                recur.actualizarRecursos(recu1, recu2, recu3, vida);
+            }
+            else{
+                System.out.println("No se puede recolectar todavia");
+            }
+        }
+    }
+    
+    public void recolectarMu(){
+        Edificaciones recur = listaEdiMu.getRecursos();
+        int recu1, recu2, recu3, vida;
+        if(listaEdiM.contarTodasEdificaciones()>0){
+            if(listaEdiM.verificarEdificacion("Recolector Dinero")){
+                recu1 = recur.getRecurso1()+3000;
+                recu2 = recur.getRecurso2();
+                recu3 = recur.getRecurso3();
+                vida = recur.getVida();
+                recur.actualizarRecursos(recu1, recu2, recu3, vida);
+            }
+            else{
+                System.out.println("No se puede recolectar todavia");
+            }
+            if(listaEdiM.verificarEdificacion("Recolector Credito")){
+                recu1 = recur.getRecurso1();
+                recu2 = recur.getRecurso2()+3000;
+                recu3 = recur.getRecurso3();
+                vida = recur.getVida();
+                recur.actualizarRecursos(recu1, recu2, recu3, vida);
+            }
+            else{
+                System.out.println("No se puede recolectar todavia");
+            }
+            if(listaEdiM.verificarEdificacion("Recolector Cupon")){
+                recu1 = recur.getRecurso1();
+                recu2 = recur.getRecurso2();
+                recu3 = recur.getRecurso3()+3000;
+                vida = recur.getVida();
+                recur.actualizarRecursos(recu1, recu2, recu3, vida);
+            }
+            else{
+                System.out.println("No se puede recolectar todavia");
+            }
+        }
+    }
     
     public void menuPrincipal(){
         random();
