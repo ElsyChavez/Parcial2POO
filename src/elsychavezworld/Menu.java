@@ -965,8 +965,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -988,8 +1011,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal1){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1021,8 +1067,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1044,8 +1113,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal1){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1077,8 +1169,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1100,8 +1215,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal1){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1133,8 +1271,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1156,8 +1317,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal1){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1189,8 +1373,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1212,8 +1419,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal1){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1245,8 +1475,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1268,8 +1521,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal1){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1301,8 +1577,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1324,8 +1623,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal1){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1357,8 +1679,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1380,8 +1725,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal1){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1413,8 +1781,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1436,8 +1827,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal1){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1469,8 +1883,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                if(r==1 && edificiosTotal1==1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1492,8 +1929,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiMu.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal1){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiMu.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiMu.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1525,8 +1985,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                    while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1535,6 +2018,7 @@ public class Menu {
                     }
                     else{System.out.println("No hay tropas de muggle entrenadas aun");}
                 }
+                
                 else if(jugador2.getNombreRaza().equals("darksider")){
                     if(listaMiliMu.verificarMiembros("Escuadron Muggle") || listaMiliMu.verificarMiembros("Especialista Muggle")){
                         listaMiliMu.mostrarMiliciaEnemigo();
@@ -1548,8 +2032,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal1){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                    while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1581,8 +2088,31 @@ public class Menu {
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiM.getEdificaciones(r);
                             if(r>0 && r<=edificiosTotal){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                if(r==1 && edificiosTotal1==1){
+                                            listaEdiM.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiM.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1603,9 +2133,37 @@ public class Menu {
                             System.out.println("Escriba el numero del edificio que desea atacar: ");
                             r=read.nextInt();
                             Edificaciones edifD2 = listaEdiD.getEdificaciones(r);
+                            
                             if(r>0 && r<=edificiosTotal1){
-                                vida =  edifD2.getVida() - miliM.getDanio();
-                                edifD2.actualizarVida(vida);
+                                    while(edificiosTotal1!=1){
+                                        if(r==1){
+                                            System.out.println("No puede destruir el centro de mando aun. Intenta todo este proceso de seleccion en menu nuevamente");
+                                            break;
+                                        }
+                                        else if(r!=1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                    if(r==1 && edificiosTotal1==1){
+                                            listaEdiD.getEdificaciones(r);
+                                            vida =  edifD2.getVida() - miliM.getDanio();
+                                            edifD2.actualizarVida(vida);
+                                            if(edifD2.getVida()<=0){
+                                                listaEdiD.remover(r);
+                                                System.out.println("Termino el juego");
+                                                System.exit(0);
+                                            }
+                                        }
+                                    }
+                                }else{
+                                    System.out.println("Ingresa un valor valido la proxima vez.");
+                                }
                             }
                             else{
                                 System.out.println("Ingrese un valor valido la proxima vez.");
@@ -1616,8 +2174,7 @@ public class Menu {
                 }
                
             }   
-        }
-}
+        
     
 
 

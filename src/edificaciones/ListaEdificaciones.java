@@ -223,4 +223,14 @@ public ArrayList<Edificaciones> edificio;
             cont++;
         }return edificio.get(puesto-1);
     }
+    
+    public void remover(int puesto){      
+        int cont =0, contE = edificio.size();
+        while(cont<contE){
+            if(edificio.get(cont).equals(edificio.get(puesto-1))){
+                edificio.remove(puesto-1);
+            }
+            cont++;
+        }
+    }
 }
