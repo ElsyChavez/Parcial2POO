@@ -25,7 +25,8 @@ public class Jugador {
                 + "\nExisten tres razas, y cada uno debera seleccionar una sola"
                 + "\nMago: Debil ataque, recoleccion promedio."
                 + "\nDarkSider: Fuerte ataque, baja recoleccion."
-                + "\nMuggle: Rapidos recolectando, promedio en todo lo demas\n");
+                + "\nMuggle: Rapidos recolectando, promedio en todo lo demas\n"
+                + "para recolectar debe tener creadas los tres tipos de recolector.");
     }
 
     public String getNombre() {
